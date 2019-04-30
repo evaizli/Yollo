@@ -1,0 +1,40 @@
+{
+  "name": "yollo",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "lodash": "^4.17.11",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  },
+  "description": "# Description  <<<<<<< HEAD Yollo, a Trello clone, is a web-based task and project management tool that allowing individuals to stay organized and teams to collaborate small and large projects.   ======= Yollo, a Trello Clone, is a web-based task and project management tool that enabling individuals to stay organized and teams to collaborate small and large projects.   >>>>>>> 890250e89c740afffd9471ae54c7058fb9070d88",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "webpack --watch --mode=Development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evaizli/yollo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evaizli/yollo/issues"
+  },
+  "homepage": "https://github.com/evaizli/yollo#readme"
+}
