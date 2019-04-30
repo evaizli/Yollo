@@ -24,7 +24,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "webpack --watch --mode=Development"
+    "start": "webpack --watch --mode=development"
   },
   "repository": {
     "type": "git",
