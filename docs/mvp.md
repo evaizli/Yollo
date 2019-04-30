@@ -15,7 +15,8 @@ Yollo, a Trello clone, is a web-based task and project management tool that allo
 * CSS Design
 
 ### 4. Lists & Cards (2 day)
-* User can create list witin boards
+* User can create list within boards
+* User can create cards (as list items) within lists
 
 ### 5. Sharing Boards(1 day)
 * Boards can be shared with other users
