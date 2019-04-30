@@ -3,6 +3,7 @@
 | column_name     | data_type |                   details |
 |-----------------|:---------:|--------------------------:|
 | `id`            | integer   | not null, primary key     | 
+| `name`          | string    | not null                  |
 | `email`         | string    | not null, indexed, unique |
 |`password_digest`| string    | not null                  |
 | `session_token` | string    | not null, indexed, unique |
@@ -22,6 +23,18 @@
 | `updated_at`| datetime  | not null              |
 * `user_id` references `users`
 * index on `user_id`
+
+# `board_shares` 
+
+| column_name | data_type |               details |
+|-------------|:---------:|----------------------:|
+| id          | integer   | not null, primary key |
+| user_id     | integer   | not null, indexed     |
+| board_id    | integer   | not null, indexed     |
+| create_at   | datetime  | not null              |
+| updated_at  | datetime  | not null              |
+* `user_id` references `users`
+* `board_id` references `boards`
 
 # `lists` 
 
