@@ -6,7 +6,7 @@ import configureStore from "./store/store";
 import Root from "./components/root";
 
 ///testing
-import {login} from "./actions/session_actions";
+import {login, signup} from "./actions/session_actions";
 
 
 document.addEventListener("DOMContentLoaded",()=>{
@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     const store = configureStore();
     ///testing
     window.login = login;
+    window.signup = signup;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     ReactDOM.render(<Root store={store}/>, root);
