@@ -2,7 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 
+import configureStore from "./store/store";
+import Root from "./components/root";
+
+///testing
+import {login} from "./actions/session_actions";
+
+
 document.addEventListener("DOMContentLoaded",()=>{
     const root = document.getElementById("root");
-    ReactDOM.render(<h2>Welcome to Yollo</h2>, root);
+    const store = configureStore();
+    ///testing
+    window.login = login;
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
+    ReactDOM.render(<Root store={store}/>, root);
 });
