@@ -6,12 +6,24 @@ import configureStore from "./store/store";
 import Root from "./components/root";
 
 ///testing
-import {login, signup} from "./actions/session_actions";
+import {login, signup, signout} from "./actions/session_actions";
 
 
 document.addEventListener("DOMContentLoaded",()=>{
+    let store;
+    if (window.currentUser){
+        const preloadedState = {
+            session: {id: window.currentUser.id},
+            entities: {
+                users: {[window.currentUser.id]: window.currentUser}
+        }
+      };
+      store = configureStore(preloadedState);
+      delete window.currentUser;
+    } else {
+        store =configureStore();
+    }
     const root = document.getElementById("root");
-    const store = configureStore();
     ///testing
     window.login = login;
     window.signup = signup;
