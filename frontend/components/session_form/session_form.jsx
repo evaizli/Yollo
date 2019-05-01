@@ -55,6 +55,18 @@ class SessionForm extends React.Component{
         }
     }
 
+    renderMessage(){
+        if (this.props.formType === "signup"){
+            return(
+             "Create a Yollo Account"   
+            );
+        } else{
+            return(
+                "Log in to Yollo"
+            );
+        }
+    }
+    
 
 
     render(){
@@ -63,7 +75,9 @@ class SessionForm extends React.Component{
                 <form onSubmit={this.handleSubmit}>
                     Welcome to Yollo!
                     <br/>
-                    Please {this.props.formType} or {this.props.navLink}
+                    {this.renderMessage()}
+                    <br/>
+                    {this.props.navLink}
                     {this.renderErrors()}
                     <div>
                         {this.renderNameInput()}
