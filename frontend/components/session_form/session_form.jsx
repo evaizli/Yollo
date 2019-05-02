@@ -77,22 +77,27 @@ class SessionForm extends React.Component{
             );
         }
     }
+
+    submitDemoUser(e){
+        e.preventDefault();
+        const demoUser = Object.assign({}, {email: "testing@testing.com", password: "password"});
+        this.props.processForm(demoUser);
+    }
     
 
 
     render(){
         return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <br/>
-                    {this.renderMessage()}
-                    <br/>
-                    {this.props.navLink}
+            <section>
+            <div className="login-form-container">
+                    <h1>{this.renderMessage()}</h1>
+                    <div className="form-type-switch-link">{this.props.navLink}</div>
                     {this.renderErrors()}
+                <form onSubmit={this.handleSubmit}>
                     <div>
                         {this.renderNameInput()}
                         <label>Email:
-                            <input type="text"
+                            <input type="email"
                                 value={this.state.email}
                                 onChange={this.update("email")}
                             />
@@ -105,11 +110,13 @@ class SessionForm extends React.Component{
                             />
                         </label>
                         <br/>
-                        <input type="submit" value={this.renderSubmitValue()}/>
+                        <input className="session-submit" type="submit" value={this.renderSubmitValue()}/>
                     </div>
 
                 </form>
+
             </div>
+        </section>
         );
     }
 

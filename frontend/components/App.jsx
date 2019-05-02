@@ -9,7 +9,6 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const App = () =>(
     <div>
-        <h2>Yollo from App Component</h2>
         <Switch>
             <AuthRoute path="/signup" component={SignupFormContainer}/>
             <AuthRoute path="/login" component={LoginFormContainer}/>
