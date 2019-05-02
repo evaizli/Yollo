@@ -4,29 +4,31 @@
 
 .fixed-up-nav{
     @include navBarGeneral();
-    background-color: $theme-background-color-nav;
-    font-family: $theme-font-base;
+    line-height: 70px;
+    font-weight: 500;
+    font-size: 20px;
+    text-size-adjust: 100%;
     
-}
 
-
-.navBar{
-    display: flex;
-    justify-content: flex-end;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    align-items: center;
+    .navBar{
+        display: flex;
+        justify-content: flex-end;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        align-items: center;
     
     .logo{
        color: white; 
        font-size: 42px;
        padding-left: 31px;
        padding-right: 5px;
+       
     }
 
     h2{
         color: white;
         font-family: $logo-font-base;
         font-size: 50px;
+        font-weight: bold;
     }
     .space{
         flex-grow: 1;
@@ -42,14 +44,30 @@
     outline: 0;
     font-weight: inherit;
     font-style: inherit;
-    font-size: 100%;
+    font-size: 80%;
     font-family: inherit;
     vertical-align: baseline;
     color: white;
     text-decoration: none;
     box-sizing: border-box;
     }
-    button{
-
+    span{
+    padding: 8px;
+    background: white;
+    border-radius: 5px;
+    color: #0079bf;
     }
+}
+}
+
+.demo-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    h2{
+        color:purple;
+        padding: 40px;
+        font-size: 30px;
+    }
+
 }
