@@ -29,3 +29,9 @@
         color: white;
         box-shadow: 0 2px 0 $theme-color-submit-shadow;
 }
+
+
+@mixin navBarGeneral() {
+        background-color: $theme-background-color-nav;
+        font-family: $theme-font-base;
+}

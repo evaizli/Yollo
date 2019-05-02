@@ -2,6 +2,7 @@
 @import "../base/color.scss";
 @import "../base/mixin.scss";
 @import "../base/color.scss";
+@import "../base/fonts.scss";
 
 .login-form-container{
     //general sytles
@@ -10,7 +11,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 2em 1em;
-    font-family: "jaf-facitweb","Helvetica Neue",Arial,sans-serif;
+    font-family: $theme-font-base;
 
     h1{
         font-size: 38px;
@@ -19,7 +20,7 @@
         line-height: 48px;
         font-weight: bold;
         margin-bottom:  5px;
-        font-family: "jaf-facitweb","Helvetica Neue",Arial,sans-serif;
+        font-family: $theme-font-base;
     }
     a{
         margin-bottom: 15px;
@@ -63,11 +64,11 @@
         margin: 0 0 10px;
     }
     .error-message {
-        background: #eb5a46;
+        background: $error-color;
         color: #fbedeb;
         font-size: 14px;
-        font-family: "Helvetica Neue",Arial,sans-serif;
-        border: 1px solid #eb5a46;
+        font-family: $theme-font-base;
+        border: 1px solid $error-color;
         display: inline-block;
         padding: 10px;
         border-radius: 4px;

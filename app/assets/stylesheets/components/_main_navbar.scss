@@ -1,6 +1,16 @@
+@import "../base/fonts.scss";
+@import "../base/color.scss";
+@import "../base/mixin.scss";
+
+.fixed-up-nav{
+    height: 150px;
+}
+
+
 .navBar{
     display: flex;
     justify-content: flex-end;
+    @include navBarGeneral();
     a{
 
     }
