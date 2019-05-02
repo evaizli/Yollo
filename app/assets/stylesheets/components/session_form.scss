@@ -1,33 +1,7 @@
-@import "styles/color.scss";
-
-@mixin inputbox{
-        background: #edeff0;
-        border-radius: 4px;
-        border: 1px solid #cdd2d4;
-        box-sizing: border-box;
-        padding: .5em;
-        color: inherit;
-        font-size: 16px;
-        font-weight: 300;
-        padding: 10px;
-        display: block;
-        width: 400px;
-        margin: 0 0 1.2px;
-        line-height: 1.44em;
-}
-
-@mixin blockButton(){
-        display: inline;
-        width: 400px;
-        border-radius: 3px;
-        padding: 10px;
-        cursor: pointer;
-        font-size: 20px;
-        color: white;
-        box-shadow: 0 2px 0 #3F6F21
-}
-
-
+@import "../base/reset.scss";
+@import "../base/color.scss";
+@import "../base/mixin.scss";
+@import "../base/color.scss";
 
 .login-form-container{
     //general sytles
@@ -44,10 +18,13 @@
         color: #333;
         line-height: 48px;
         font-weight: bold;
-        margin-bottom:  30px;
+        margin-bottom:  5px;
         font-family: "jaf-facitweb","Helvetica Neue",Arial,sans-serif;
     }
+    a{
+        margin-bottom: 15px;
 
+    }
     a, a:visited{
         color: $link-color;
     }
@@ -56,26 +33,25 @@
         color: $hover-link-color
     }
 
-    // input{
-    //     display: block;
-    //     width: 400px;
-    //     margin: 0 0 1.2px;
-    //     line-height: normal;
-    // }
+    .errors{
+        li{
+            margin-bottom: 5px;
+            color: #eb5a46;
+        }
+    }
 
-     // input type email, password
-
+    //input box
     input[type="text"],
     input[type="email"],
     input[type="password"] { 
-        @include inputbox();
+        @include signinInputBox();
         margin-top: 10px;
     }
 
     // input type submit general 
     input[type="submit"]{
         background-color: $theme-color-submit;
-        @include blockButton();
+        @include signinButton();
     }
 
     .demo-submit{

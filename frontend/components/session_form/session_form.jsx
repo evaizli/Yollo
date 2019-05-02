@@ -81,9 +81,9 @@ class SessionForm extends React.Component{
         return(
             <div className="login-container">
                 <div className="login-form-container">
+                    <div className="errors">{this.renderErrors()} </div>
                     <h1>{this.renderMessage()}</h1>
                     <div className="form-type-switch-link">{this.props.navLink}</div>
-                    {this.renderErrors()}
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         {this.renderNameInput()}

@@ -1,0 +1,31 @@
+@import "./color.scss";
+@import "./fonts.scss";
+
+// login & signup input box 
+@mixin signinInputBox{
+        background: #edeff0;
+        border-radius: 4px;
+        border: 1px solid #cdd2d4;
+        box-sizing: border-box;
+        padding: .5em;
+        color: inherit;
+        font-size: 16px;
+        font-weight: 300;
+        padding: 10px;
+        display: block;
+        width: 400px;
+        margin: 0 0 1.2px;
+        line-height: 1.44em;
+}
+
+//sign in and sign up button styling
+@mixin signinButton(){
+        display: inline;
+        width: 400px;
+        border-radius: 3px;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        color: white;
+        box-shadow: 0 2px 0 $theme-color-submit-shadow;
+}
