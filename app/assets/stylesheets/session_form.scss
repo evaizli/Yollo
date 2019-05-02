@@ -1,4 +1,4 @@
-$theme-color-submit: #61BD4F;
+@import "styles/color.scss";
 
 @mixin inputbox{
         background: #edeff0;
@@ -27,11 +27,16 @@ $theme-color-submit: #61BD4F;
         box-shadow: 0 2px 0 #3F6F21
 }
 
+
+
 .login-form-container{
     //general sytles
     width: 450px;
-    margin: 85 auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 2em 1em;
+    font-family: "jaf-facitweb","Helvetica Neue",Arial,sans-serif;
 
     h1{
         font-size: 38px;
@@ -39,7 +44,16 @@ $theme-color-submit: #61BD4F;
         color: #333;
         line-height: 48px;
         font-weight: bold;
+        margin-bottom:  30px;
         font-family: "jaf-facitweb","Helvetica Neue",Arial,sans-serif;
+    }
+
+    a, a:visited{
+        color: $link-color;
+    }
+
+    a:hover{
+        color: $hover-link-color
     }
 
     // input{
@@ -55,12 +69,17 @@ $theme-color-submit: #61BD4F;
     input[type="email"],
     input[type="password"] { 
         @include inputbox();
+        margin-top: 10px;
     }
 
     // input type submit general 
     input[type="submit"]{
         background-color: $theme-color-submit;
         @include blockButton();
+    }
+
+    .demo-submit{
+        margin-top: 20px;
     }
 
     label {
