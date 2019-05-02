@@ -6,8 +6,11 @@ const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
     <header className="fixed-up-nav">
         <nav className="navBar">
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Sign up!</Link>
+            <i className="logo fab fa-trello"></i>
+            <h2>Yollo</h2>
+            <div className="space"></div>
+            <Link to="/login">Log In</Link>
+            <Link to="/signup">Sign Up</Link>
         </nav>
     </header>
     );

@@ -32,6 +32,15 @@
 
 
 @mixin navBarGeneral() {
-        background-color: $theme-background-color-nav;
+        box-sizing: border-box;
+        position: fixed;
         font-family: $theme-font-base;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        line-height: 95px;
+        font-weight: 500;
+        font-size: 20px;
+        text-size-adjust: 100%;
 }

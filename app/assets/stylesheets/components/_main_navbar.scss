@@ -3,18 +3,52 @@
 @import "../base/mixin.scss";
 
 .fixed-up-nav{
-    height: 150px;
+    @include navBarGeneral();
+    background-color: $theme-background-color-nav;
+    font-family: $theme-font-base;
+    
 }
 
 
 .navBar{
     display: flex;
     justify-content: flex-end;
-    @include navBarGeneral();
-    a{
-
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    align-items: center;
+    
+    .logo{
+       color: white; 
+       font-size: 42px;
+       padding-left: 31px;
+       padding-right: 5px;
     }
 
+    h2{
+        color: white;
+        font-family: $logo-font-base;
+        font-size: 50px;
+    }
+    .space{
+        flex-grow: 1;
+    }
+
+    a{
+    margin: 0;
+    margin-right: -8px;
+    padding: 2px;
+    height: 80px;
+    padding-right: 40px;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+    }
     button{
 
     }
