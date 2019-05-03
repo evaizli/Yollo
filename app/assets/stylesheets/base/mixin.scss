@@ -21,24 +21,29 @@
 //sign in and sign up button styling
 @mixin signinButton(){
         display: inline;
-        width: 400px;
         border-radius: 3px;
         padding: 10px;
         cursor: pointer;
         font-size: 20px;
         color: white;
         box-shadow: 0 2px 0 $theme-color-submit-shadow;
+        background-color: $theme-color-submit;
 }
 
 
 @mixin navBarGeneral() {
         box-sizing: border-box;
         position: fixed;
-        font-family: $theme-font-base;
         top: 0;
         right: 0;
         left: 0;
         z-index: 1030;
         background-color: $theme-background-color-nav;
         font-family: $theme-font-base;
+}
+
+@mixin splashSectionLayout(){
+        font-family: $theme-font-base;
+        box-sizing: border-box;
+        width: -webkit-fill-available;
 }

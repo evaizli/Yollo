@@ -14,11 +14,11 @@ class DemoButton extends React.Component{
 
     render(){
         return(
-            <>
+            <div className="outter-demo-container">
             <div className="demo-user-container">
-                <p className="tag-line-message">
+                <h1 className="tag-line-message">
                     Yollo lets you work more collaboratively and get more done. 
-                </p>
+                </h1>
                 <p className="sub-tag-line-message">
                     Yoll's boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexiable, and rewarding way.
                 </p>
@@ -26,7 +26,7 @@ class DemoButton extends React.Component{
                 <img className="hero-image-demo" src="hero-a.svg" alt=""/>
 
             </div>
-            </>
+            </div>
         );
     }
 

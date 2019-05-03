@@ -52,6 +52,7 @@
     // input type submit general 
     input[type="submit"]{
         background-color: $theme-color-submit;
+        width: 400px;
         @include signinButton();
     }
 

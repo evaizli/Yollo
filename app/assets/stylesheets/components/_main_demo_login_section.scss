@@ -1,3 +1,55 @@
-.hero-image-demo{
-    float: right;
+@import "../base/color.scss";
+@import "../base/fonts.scss";
+@import "../base/mixin.scss";
+
+
+.outter-demo-container{
+    @include splashSectionLayout();
+    color: white;
+    background: $theme-background-splash;
+    flex-flow: column wrap;
+    height: 550px;
+    
+    .demo-user-container{
+        text-align: left !important;
+        padding-inline-start: 80px;
+        padding-inline-end: 80px;
+    
+
+    .tag-line-message{
+        // margin-top: 85px;
+        // margin-left: 28px;
+        // font-size: 40px;
+        // width: 650px;
+        font-size: 3rem;
+        margin-bottom: .5rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        width: 50%;
+    }
+    .sub-tag-line-message{
+        font-size: 1.5625rem;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        width: 50%;
+    }
+
+    input{
+        @include signinButton();
+        width: 245px;
+        // margin: 16px 28px 16px 28px;
+        
+    }
+
+
+    .hero-image-demo{
+        float: right;
+        vertical-align: middle;
+        border-style: none;
+        max-width: 100%;
+    }
+}
 }

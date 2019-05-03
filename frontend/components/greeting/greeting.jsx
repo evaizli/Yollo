@@ -16,8 +16,9 @@ const Greeting = ({ currentUser, logout }) => {
             </nav>
         </header>
         <section className="demo-section">
-                <h2>I'm trying... 一生懸命cssを勉強します!!!</h2>
                 <DemoButtonContainer />
+                <br/>
+                {/* <h2>I'm trying... 一生懸命cssを勉強します!!!</h2> */}
         </section>
     </>
     );
