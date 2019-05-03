@@ -70,7 +70,7 @@ class SessionForm extends React.Component{
 
     renderDemo(){
         return this.props.formType !== "signup" ? 
-        <input className="demo-submit" type="submit" value="Demo Login" onClick={this.submitDemoUser} /> : "";
+        <input className="demo-submit" type="submit" value="Demo Log In" onClick={this.submitDemoUser} /> : "";
     }
 
     submitDemoUser(e){

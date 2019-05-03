@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import DemoButtonContainer from "../demo_session/demo_container";
 
 
 const Greeting = ({ currentUser, logout }) => {
@@ -15,7 +16,8 @@ const Greeting = ({ currentUser, logout }) => {
             </nav>
         </header>
         <section className="demo-section">
-                <h2>I'm trying 一生懸命cssを勉強します</h2>
+                <h2>I'm trying... 一生懸命cssを勉強します!!!</h2>
+                <DemoButtonContainer />
         </section>
     </>
     );
