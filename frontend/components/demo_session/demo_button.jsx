@@ -20,7 +20,7 @@ class DemoButton extends React.Component{
                     Yollo lets you work more collaboratively and get more done. 
                 </h1>
                 <p className="sub-tag-line-message">
-                    Yoll's boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexiable, and rewarding way.
+                    Yollo’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible, and rewarding way.
                 </p>
                 <input type="submit-demo-user" type="submit" value="Demo Log In" onClick={this.submitDemoUser}/>
                 <img className="hero-image-demo" src="hero-a.svg" alt=""/>

@@ -12,8 +12,8 @@
     
     .demo-user-container{
         text-align: left !important;
-        padding-inline-start: 80px;
-        padding-inline-end: 80px;
+        padding-inline-start: 100px;
+        padding-inline-end: 100px;
     
 
     .tag-line-message{
@@ -32,9 +32,10 @@
     .sub-tag-line-message{
         font-size: 1.5625rem;
         font-weight: 300;
-        margin-top: 0;
+        margin-top: 16px;
         margin-bottom: 1rem;
         width: 50%;
+        line-height: 1.5;
     }
 
     input{
