@@ -8,15 +8,15 @@
 #### `users`
 * `POST /api/users` - sign up
 
-#### `boards`
+#### `sessions`
 * `POST /api/session` - log in
 * `DELETE /api/session` - log out
 
 #### `boards`
 * `GET /api/boards` -get boards
 * `POST /api/boards` - create new board
-* `PATCH /api/boards/:id` - update board
-* `DELETE /api/boards/:id` - delete board
+* `GET /api/boards/:id` - get board
+
 
 #### `lists`
 * `POST /api/lists` - create new list (nested in the board)

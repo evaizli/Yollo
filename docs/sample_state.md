@@ -22,7 +22,7 @@ errors - contains error information for different forms
                 boardIds: [2],
             },
             },
-            boards: {
+        boards: {
             1: {
                 id: 1,
                 title: "Solo Full-stack Project",
@@ -36,7 +36,7 @@ errors - contains error information for different forms
                 listIds: [3, 4],
             },
             },
-            lists: {
+        lists: {
             1: {
                 id: 1,
                 position: 1,

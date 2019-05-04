@@ -1,17 +1,15 @@
 # == Schema Information
 #
-# Table name: boards
+# Table name: board_shares
 #
 #  id         :bigint           not null, primary key
-#  title      :string           not null
 #  user_id    :integer          not null
+#  board_id   :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Board < ApplicationRecord
-    validates :title, presence: true
-
+class BoardShare < ApplicationRecord
     belongs_to :user
-    has_many :board_shares,  dependent: :destroy
+    belongs_to :board
 end
