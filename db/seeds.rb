@@ -8,7 +8,9 @@
 
 User.destory_all
 
-demo1=User.create(name: "testing", email:"testing@testing.com", password: "password")
-demo2=User.create(name: "Alexander Hamilton", email:"alex@broadway.com", password: "password")
-demo3=User.create(name: "totoro", email:"totoro@kawaii.com", password: "password")
+user1=User.create(name: "testing", email:"testing@testing.com", password: "password")
+user2=User.create(name: "Alexander Hamilton", email:"alex@broadway.com", password: "password")
+user3=User.create(name: "totoro", email:"totoro@kawaii.com", password: "password")
+user4=User.create(name: "Leonardo", email: "leo@nijiaturtle.com", password: "password")
+user5=User.create(name: "Raphael", email: "raph@nijiaturtle.com", password:"password")
 

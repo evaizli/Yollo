@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import Boards from "./board_index";
-import { receiveBoards } from "../../actions/board_actions";
+import { fetchBoards } from "../../actions/board_actions";
+import { openModal } from "../../actions/modal_actions";
 
 
 const mapStateToProps = state =>{
@@ -11,7 +12,8 @@ const mapStateToProps = state =>{
 
 const mapDispatchToProps = dispatch => {
     return ({
-        receiveBoards: () => dispatch(receiveBoards())
+        fetchBoards: () => dispatch(fetchBoards()),
+        openModal: () => dispatch(openModal("create board"))
     });
 };
 

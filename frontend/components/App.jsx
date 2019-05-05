@@ -5,11 +5,13 @@ import LoginFormContainer from "./session_form/login_form_container";
 import BoardsContainer from "./boards/board_index_container";
 import { Route, Switch, Redirect, Link, HashRouter } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
+import Modal from './modal';
 
 
 
 const App = () =>(
     <div>
+        <Modal/>
         <Switch>
             <AuthRoute path="/signup" component={SignupFormContainer}/>
             <AuthRoute path="/login" component={LoginFormContainer}/>

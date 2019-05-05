@@ -1,20 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 class Boards extends React.Component{
     constructor(props){
         super(props);
     }
     
     componentDidMount(){
-        this.props.receiveBoards();
+        this.props.fetchBoards();
     }
+
 
     render(){
         const boards = this.props.boards.map(board =>{
             return(
-                <Link key={board.id} to={`boards/${board.id}`}>{board.title}</Link> 
+                <li key={board.id}>
+                <Link to={`boards/${board.id}`}>{board.title}</Link> 
+                </li>
             );
         });
         return(
@@ -26,6 +28,7 @@ class Boards extends React.Component{
                     <ul>
                         {boards}
                     </ul>
+                    <button className="create-board-button" onClick={()=>this.props.openModal()}>Create new board...</button>
                 </div>
             </div>
         );

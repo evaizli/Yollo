@@ -1,18 +1,20 @@
 import React from "react";
 
-class BoardForm extends React.Component{
+export default class BoardForm extends React.Component{
     constructor(props){
         super(props);
-        this.props = this.props.board;
+        // debugger
+        this.state = {title: props.board.title};
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e){
         e.preventDefault();
         this.props.createBoard(this.state);
+        this.props.closeModal();
     }
 
-    update([field]){
+    update(field){
         return e => this.setState({[field]: e.currentTarget.value});
     }
 
@@ -23,12 +25,12 @@ class BoardForm extends React.Component{
                     <div className="form-title">
                         <input 
                             type="text" 
-                            value={this.board.title}
+                            value={this.state.title}
                             placeholder="Add board title" 
                             onChange={this.update("title")}
                         />
                     </div>
-                    <button className="create-board-button">Create new board...</button>
+                    <input type="submit" value="Create Board" className="create-board-button"/>
                 </form>
             </div>
         );
@@ -36,4 +38,4 @@ class BoardForm extends React.Component{
 
 }
 
-export default BoardForm;
+// export default BoardForm;

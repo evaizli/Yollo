@@ -10,15 +10,14 @@ export const fetchBoards = () => {
 export const fetchBoard = (id) => {
     return $.ajax({
         method: "GET",
-        url: `api/boards/${id}`,
-        data: {id}
+        url: `api/boards/${id}`
     });
 }; 
 
 export const createBoard = (board) => {
     return $.ajax({
         method: "POST",
-        url: `api/boards/${board.id}`,
+        url: `api/boards`,
         data: {board}
     });
 }; 

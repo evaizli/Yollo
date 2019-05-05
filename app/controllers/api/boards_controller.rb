@@ -9,6 +9,8 @@ class Api::BoardsController < ApplicationController
         @board = Board.new(board_params)
         @board.user_id = current_user.id
         if @board.save
+            @board_share = BoardShare.new(user_id: current_user.id, board_id: @board.id) 
+            @board_share.save
             render json: @board ## to be refactored after list 
         else
             render json: @board.errors.full_messages, status: 422
