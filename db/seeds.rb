@@ -8,6 +8,7 @@
 
 User.destroy_all
 Board.destroy_all
+BoardShare.destroy_all
 
 user1=User.create(name: "testing", email:"testing@testing.com", password: "password")
 user2=User.create(name: "Alexander Hamilton", email:"alex@broadway.com", password: "password")
