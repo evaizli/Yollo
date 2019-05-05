@@ -9,6 +9,7 @@ import Modal from './modal';
 
 
 
+
 const App = () =>(
     <div>
         <Modal/>

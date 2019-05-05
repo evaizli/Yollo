@@ -25,6 +25,7 @@ const Greeting = ({ currentUser, logout }) => {
     const personalGreeting = () => (
     <header className="login-nav">
         <nav className="loginBar" >
+            //render NavBar container as replacement 
             <h2 >Hi, {currentUser.name}!</h2>
                 <h2>this site in under construction. come back soon. 一生懸命 やります</h2>
             <button onClick={logout}>Log Out</button>
