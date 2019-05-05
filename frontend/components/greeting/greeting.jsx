@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import DemoButtonContainer from "../demo_session/demo_container";
+import BoardsContainer from "../boards/board_index_container";
 
 
 const Greeting = ({ currentUser, logout }) => {
@@ -18,7 +19,6 @@ const Greeting = ({ currentUser, logout }) => {
         <section className="demo-section">
                 <DemoButtonContainer />
                 <br/>
-                {/* <h2>I'm trying... 一生懸命cssを勉強します!!!</h2> */}
         </section>
     </>
     );
@@ -26,8 +26,12 @@ const Greeting = ({ currentUser, logout }) => {
     <header className="login-nav">
         <nav className="loginBar" >
             <h2 >Hi, {currentUser.name}!</h2>
+                <h2>this site in under construction. come back soon. 一生懸命 やります</h2>
             <button onClick={logout}>Log Out</button>
         </nav>
+        <div>
+            <BoardsContainer/>
+        </div>
     </header>
     );
 

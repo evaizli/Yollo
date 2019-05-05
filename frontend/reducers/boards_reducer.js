@@ -3,7 +3,7 @@ import {
     RECEIVE_BOARD
 } from "../actions/board_actions";
 
-import { merge } from "lodsh";
+import { merge } from "lodash";
 
 const boardsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -12,7 +12,7 @@ const boardsReducer = (state = {}, action) => {
         case RECEIVE_BOARDS:
             return action.boards;
         case RECEIVE_BOARD:
-            newState = merge({}, state, { [action.board.id]: action.board });
+            newState = merge({}, state, {[action.board.id]: action.board });
             return newState;
         default:
             return state;
