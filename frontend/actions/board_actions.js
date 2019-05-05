@@ -17,7 +17,52 @@ export const receiveBoard = (board) => ({
     board: board
 });
 
-export const recieveBoardErrors = errors =>({
+export const receiveBoardErrors = errors =>({
     type: RECEIVE_BOARD_ERRORS,
     errors: errors
 });
+
+export const clearBoardErrors = () => {
+    return {
+        type: CLEAR_BOARD_ERRORS
+    };
+};
+
+export const fetchBoards = () => dispatch => {
+    return(
+        ApiUtil.fetchBoards().then(boards =>dispatch(receiveBoards(boards))
+        ), err => (
+            dispatch(receiveBoardErrors(err.responseJSON))
+        )
+    );
+};
+
+
+export const fetchBoard = (id) => dispatch => {
+    return (
+        ApiUtil.fetchBoard(id).then(board => dispatch(receiveBoard(board))
+        ), err => (
+            dispatch(receiveBoardErrors(err.responseJSON))
+        )
+    );
+};
+
+export const createBoard = (board) => dispatch => {
+    return(
+        ApiUtil.createBoard(board).then(board => dispatch(receiveBoard(board))
+        ), err => (dispatch(receiveBoardErrors(err.responseJSON)))
+    );
+};
+
+export const updateBoard = (board) => dispatch => {
+    return (
+        ApiUtil.updateBoard(board).then(board => dispatch(receiveBoard(board))
+        ), err => (dispatch(receiveBoardErrors(err.responseJSON)))
+    );
+};
+
+export const clearErrors = () => dispatch => {
+    dispatch(receiveBoardErrors([]));
+};
+
+
