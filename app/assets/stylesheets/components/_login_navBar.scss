@@ -24,6 +24,12 @@
     border-radius: 5px;
     background: hsla(0,0%,100%,.3);
   }
+  .home-logo:hover{
+      background: rgba(255, 255, 255, 0.5);
+  }
+
+
+
   .logo-board-container{
     background: hsla(0,0%,100%,.3);
     margin: 4px;
@@ -45,6 +51,9 @@
       text-decoration: none;
     }
 
+    .logo-board-container:hover{
+      background: rgba(255, 255, 255, 0.5);
+    }
  
   }
   .logo-site-container{
@@ -86,87 +95,24 @@
   }
 
   .create-board-container:hover{
-        color:  hsla(0,0%,100%,.9);
+      background: rgba(255, 255, 255, 0.5);
   }
 
   .space2{
     flex-grow: 2;
   }
+
   .logout-button{
+    color: white;
+    font-size: 16px;
+    margin: 4px;
+    border-radius: 5px;
+    background: hsla(0,0%,100%,.3);
     align-self: flex-end;
     margin-right: 31px;
+    border-color: transparent;
+    padding: 6px;
   }
     
 }
 
-
-
-
-// .user-nav-bar {
-//   background: $theme-background-color-nav;
-//   color: white;
-//   display: flex;
-//   justify-content: space-between;
-//   padding: 5px;
-
-//   button {
-//     color: white;
-//     border: none;
-//     background: #5a97c2;
-//     padding: 7px 7px; 
-//     border-radius: 3px;
-//     margin-left: 10px;
-//   }
-
-//   button:hover {
-//     background: #367eb1;
-//   }
-
-//   .header-board-buttons {
-//     a {
-//       color: white;
-//       background: #5a97c2;
-//       margin-left: 2px;
-//       padding: 4px 7px;
-//       border-radius: 3px;
-//     }
-//     a:hover {
-//       background: #367eb1;
-//     }
-
-//     .boards-button {
-//       font-weight: 700;
-//       font-size: 15px;
-//       i {
-//         margin-right: 5px;
-//       }
-//     }
-//   }  
-  
-
-//   i {
-//     font-size: 17px;
-//   }
-  
-//   .logo {
-//     display: flex;
-//     align-items: center;
-//     font-size: 20px;
-//     h1 {
-//       font-family: 'Pacifico', cursive;
-//     }
-//     a {
-//       color: white;
-//     }
-//     a:hover {
-//       color: rgb(235, 241, 242);
-//     }
-//   }
-
-//   .header-user {
-//     display: flex;
-//     .profile-dropdown {
-//       border-radius: 50%;
-//     }
-//   }
-// }
