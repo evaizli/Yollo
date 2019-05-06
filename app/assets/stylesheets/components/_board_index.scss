@@ -1,0 +1,56 @@
+@import "../base/color.scss";
+@import "../base/fonts.scss";
+@import "../base/mixin.scss";
+
+
+.board-index-main{
+    margin: 11px;
+    margin-top: 70px;
+    display: flex;
+    
+    .side-navbar-container{
+        display: block;
+
+    }
+
+    .boards-container{
+        justify-content: flex-end;
+
+
+        .board-table-header{
+            font-size: 25px;
+            font-family: $theme-font-base;
+        }
+
+        ul{
+           font-size: 15px;
+           font-family: $theme-background-color-login-nav; 
+           line-height: 2;
+           display: flex;
+
+           
+           li{
+                flex-wrap: wrap;
+                margin: 5px;
+                padding: 33px;
+                border-radius: 5px;
+                background: $link-color;
+                height: 45px;
+                width: 125px;
+                color: white;
+                text-decoration: none;
+           }
+           .create-board-button{
+                flex-wrap: wrap;
+                margin: 5px;
+                padding: 33px;
+                border-radius: 5px;
+                font-family: $theme-font-base; 
+                background: lightgray;
+                width: 178px;
+                font-size: 15px;
+           }
+        }
+
+    }
+}

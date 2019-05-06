@@ -22,7 +22,7 @@
     margin-left: 11px;
     padding: 7px;
     border-radius: 5px;
-    background: hsla(0,0%,100%,.3);
+    background: $background-nav-shadow;
   }
   .home-logo:hover{
       background: rgba(255, 255, 255, 0.5);
@@ -31,7 +31,7 @@
 
 
   .logo-board-container{
-    background: hsla(0,0%,100%,.3);
+    background: $background-nav-shadow;
     margin: 4px;
     padding: 4px;
     border-radius: 5px;
@@ -49,10 +49,11 @@
       margin-left: 4px;
       color: white; 
       text-decoration: none;
+      font-family: $theme-font-base;
     }
 
     .logo-board-container:hover{
-      background: rgba(255, 255, 255, 0.5);
+      background: $background-nav-shadow-hover;
     }
  
   }
@@ -91,11 +92,11 @@
     margin-right: 6px;
     padding: 7px;
     border-radius: 5px;
-    background: hsla(0,0%,100%,.3);
+    background: $background-nav-shadow;
   }
 
   .create-board-container:hover{
-      background: rgba(255, 255, 255, 0.5);
+      background: $background-nav-shadow-hover;
   }
 
   .space2{
@@ -106,12 +107,15 @@
     color: white;
     font-size: 16px;
     margin: 4px;
+    font-family: $theme-font-base;
     border-radius: 5px;
-    background: hsla(0,0%,100%,.3);
+    background: $background-nav-shadow;
     align-self: flex-end;
-    margin-right: 31px;
+    margin-right: 11px;
     border-color: transparent;
     padding: 6px;
+    cursor: pointer;
+    
   }
     
 }

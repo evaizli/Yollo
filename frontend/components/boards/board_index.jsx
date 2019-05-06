@@ -21,14 +21,20 @@ class Boards extends React.Component{
         });
         return(
             <div className="board-index-main">
-                <div className="all-boards">
-                    <div className="header">
-                        <h3>Personal Boards</h3>
+                <div>
+                    <div className="side-navbar-container">
+                        <h2>side bar space holder</h2>
                     </div>
-                    <ul>
-                        {boards}
-                    </ul>
-                    <button className="create-board-button" onClick={()=>this.props.openModal()}>Create new board...</button>
+
+                    <div className="boards-container">
+                        <div className="board-table-header">
+                            <h3>Personal Boards</h3>
+                        </div>
+                        <ul>
+                            {boards}
+                            <button className="create-board-button" onClick={()=>this.props.openModal()}>Create new board...</button>
+                        </ul>
+                    </div>
                 </div>
             </div>
         );
