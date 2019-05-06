@@ -1,0 +1,127 @@
+@import "../base/color.scss";
+@import "../base/fonts.scss";
+@import "../base/mixin.scss";
+
+.fixed-login-nav{
+  @include navBarGeneral();
+  font-weight: 500;
+  font-size: 18px;
+  text-size-adjust: 100%;
+  background-color: $theme-background-color-nav;
+
+  .login-nav-bar-container{
+    display: flex;
+    height: 40px;
+   
+  }
+
+  .home-logo{
+    color: white;
+    font-size: 20px;
+    // border-style: solid;
+    margin: 4px;
+    margin-left: 11px;
+    padding: 7px;
+    border-radius: 5px;
+    background: $background-nav-shadow;
+  }
+  .home-logo:hover{
+      background: rgba(255, 255, 255, 0.5);
+  }
+
+
+
+  .logo-board-container{
+    background: $background-nav-shadow;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 5px;
+    display: flex;
+    text-decoration: none;
+    .login-logo-board{
+      margin-top: 4px;
+      font-size: 20px;
+      padding-right: 5px;
+      color: white;
+    }
+    .board-index-link{
+      font-size: 16px;
+      margin-top: 5px;
+      margin-left: 4px;
+      color: white; 
+      text-decoration: none;
+      font-family: $theme-font-base;
+    }
+    
+  }
+  .logo-board-container:hover{
+    background: $background-nav-shadow-hover;
+  }
+  .logo-site-container{
+    display: flex;
+    color: hsla(0,0%,100%,.6);
+    font-size: 20px;
+    margin: 4px;
+    text-decoration: none;
+
+    .login-logo{
+      margin-top: 4px;
+      // font-size: 33px;
+      // padding-left: 31px;
+      padding-right: 5px;
+      // color: white;
+    }
+    .site-logo{
+        // color: white;
+        margin-top: 3px; 
+        font-size: 26px;
+        font-family: $logo-font-base;
+        // font-size: 28px;
+        font-weight: bold;
+    }
+  }
+  .logo-site-container:hover{
+        color:  hsla(0,0%,100%,.9);
+  }
+
+  .create-board-container{
+    color: white;
+    font-size: 20px;
+    // border-style: solid;
+    margin: 4px;
+    margin-right: 6px;
+    padding: 7px;
+    border-radius: 5px;
+    background: $background-nav-shadow;
+  }
+
+  .create-board-container:hover{
+      background: $background-nav-shadow-hover;
+  }
+
+  .space2{
+    flex-grow: 2;
+  }
+
+  .logout-button{
+    color: white;
+    font-size: 16px;
+    margin: 4px;
+    font-family: $theme-font-base;
+    border-radius: 5px;
+    background: $background-nav-shadow;
+    align-self: flex-end;
+    margin-right: 11px;
+    border-color: transparent;
+    padding: 6px;
+    cursor: pointer;
+    
+  }
+
+  .logout-button:hover{
+      background: $background-nav-shadow-hover;
+  }
+
+    
+}
+

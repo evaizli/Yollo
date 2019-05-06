@@ -1,0 +1,87 @@
+@import "../base/color.scss";
+@import "../base/fonts.scss";
+@import "../base/mixin.scss";
+
+
+.board-index-main{
+    margin: 11px;
+    margin-top: 70px;
+    display: flex;
+    
+    .side-navbar-container{
+        display: block;
+        width: 300px;
+        position: sticky;
+     top: 0px;
+      background: transparent;
+    font-weight: 400;
+    font-family: $theme-font-base;
+
+    }
+
+    .boards-container{
+        justify-content: flex-end;
+
+
+        .board-table-header{
+            font-size: 25px;
+            font-family: $theme-font-base;
+        }
+
+        ul{
+           font-size: 15px;
+           font-family: $theme-font-base; 
+           line-height: 2;
+           display: flex;
+           flex-wrap: wrap;
+           color: white;
+            text-decoration: none;
+
+           
+           li{
+                margin: 5px;
+                padding: 33px;
+                border-radius: 5px;
+                background: $link-color;
+                height: 45px;
+                width: 125px;
+                
+           }
+           li:hover{
+               background: $theme-background-color-login-nav;
+           }
+           li a {
+                color: white;
+                text-decoration: none;
+                position: relative;
+                right: 14px;
+                bottom: 26px;
+                font-family: $theme-font-base;
+                font-weight: 700;
+           }
+
+           .create-board-container{
+                margin: 5px;
+                padding: 33px;
+                border-radius: 5px;
+                background: lightgray;
+                width: 125px;
+                
+           }
+           .create-board-button{
+                position: relative;
+                font-family: $theme-font-base; 
+                font-size: 15px;
+                border: transparent;
+                background: transparent;
+                font-weight: 700;
+                color: #6b778c;
+
+           }
+           .create-board-container:hover{
+                background: darkgray;
+           }
+        }
+
+    }
+}

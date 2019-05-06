@@ -19,6 +19,11 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
     attr_reader :password
 
+    # associations
+    has_many :board_shares, dependent: :destroy
+    has_many :boards, through: :board_shares
+    
+
     def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return nil unless user

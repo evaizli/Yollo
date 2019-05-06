@@ -28,5 +28,6 @@
 /config/master.key
 
 node_modules/
+bundle.js 
 bundle.js*
 bundle.js.map
