@@ -17,8 +17,6 @@ const Greeting = ({ currentUser, logout }) => {
             </nav>
         </header>
         <section className="demo-section">
-                <DemoButtonContainer />
-                <br/>
         </section>
     </>
     );
@@ -30,9 +28,6 @@ const Greeting = ({ currentUser, logout }) => {
                 <h2>this site in under construction. come back soon. 一生懸命 やります</h2>
             <button onClick={logout}>Log Out</button>
         </nav>
-        <div>
-            <BoardsContainer/>
-        </div>
     </header>
     );
 
