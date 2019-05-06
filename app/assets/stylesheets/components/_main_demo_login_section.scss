@@ -13,14 +13,17 @@
     @include splashSectionLayout();
     color: white;
     background: $theme-background-splash;
+    padding-bottom: 4px; 
     height: auto;
     
     .demo-user-container-center{
         padding-inline-start: 100px;
         padding-inline-end: 100px;
+        margin-top: 80px;
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 20px;
+        margin-bottom: 20px; 
+        background: $theme-background-splash;
        
     
 
@@ -71,7 +74,6 @@
 
 @media (max-width: 1000px){
     .left-text-div{
-        color: purple;
         text-align: center;
         width: 100%;
 

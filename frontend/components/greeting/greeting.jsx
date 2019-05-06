@@ -11,22 +11,34 @@ const Greeting = ({ currentUser, logout }) => {
             <nav className="navBar">
                 <i className="logo fab fa-trello"></i>
                 <h2>Yollo</h2>
-                <div className="space"></div>
+            
+                <div className="space1"></div>
                 <Link to="/login">Log In</Link>
                 <Link to="/signup"><span>Sign Up</span></Link>
             </nav>
         </header>
-        <section className="demo-section">
-        </section>
     </>
     );
     const personalGreeting = () => (
-    <header className="login-nav">
-        <nav className="loginBar" >
-            //render NavBar container as replacement 
-            <h2 >Hi, {currentUser.name}!</h2>
-                <h2>this site in under construction. come back soon. 一生懸命 やります</h2>
-            <button onClick={logout}>Log Out</button>
+    <header className="fixed-login-nav">
+        <nav className="login-nav-bar-container" >
+            <i className="home-logo fas fa-home"></i>
+            <Link to="/boards" className="logo-board-container">
+                <i className="login-logo-board fab fa-trello"></i>
+                <div className="board-index-link">Boards</div>
+            </Link>
+            <div className="space2"></div>
+
+            <Link to="/boards" className="logo-site-container">
+                <i className="login-logo fab fa-trello"></i>
+                <h2 className="site-logo">Yollo</h2>
+            </Link>
+
+            <div className="space2"></div>
+            <div className="create-board-container">
+                <i className="add-board fas fa-plus"></i>
+            </div>
+            <button className="logout-button" onClick={logout}>Log Out</button>
         </nav>
     </header>
     );
