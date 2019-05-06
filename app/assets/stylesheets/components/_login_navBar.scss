@@ -12,6 +12,7 @@
   .login-nav-bar-container{
     display: flex;
     height: 40px;
+   
   }
 
   .home-logo{
@@ -51,11 +52,10 @@
       text-decoration: none;
       font-family: $theme-font-base;
     }
-
-    .logo-board-container:hover{
-      background: $background-nav-shadow-hover;
-    }
- 
+    
+  }
+  .logo-board-container:hover{
+    background: $background-nav-shadow-hover;
   }
   .logo-site-container{
     display: flex;
@@ -117,6 +117,11 @@
     cursor: pointer;
     
   }
+
+  .logout-button:hover{
+      background: $background-nav-shadow-hover;
+  }
+
     
 }
 

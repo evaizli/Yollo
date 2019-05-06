@@ -21,7 +21,7 @@ class Boards extends React.Component{
         });
         return(
             <div className="board-index-main">
-                <div>
+      
                     <div className="side-navbar-container">
                         <h2>side bar space holder</h2>
                     </div>
@@ -32,11 +32,12 @@ class Boards extends React.Component{
                         </div>
                         <ul>
                             {boards}
+                            <div className="create-board-container">
                             <button className="create-board-button" onClick={()=>this.props.openModal()}>Create new board...</button>
+                            </div>
                         </ul>
                     </div>
                 </div>
-            </div>
         );
 
     }

@@ -22,7 +22,8 @@ const App = () =>(
             <ProtectedRoute exact path="/boards" component={BoardsContainer}/>
             <AuthRoute path="/signup" component={SignupFormContainer}/>
             <AuthRoute path="/login" component={LoginFormContainer}/>
-            <AuthRoute path="/" component={demoContainer}/>
+            <AuthRoute exact path="/" component={demoContainer}/>
+            <Redirect to="/"/>
         </Switch>
 
     </div>
