@@ -20,15 +20,13 @@ export default class BoardForm extends React.Component{
     render(){
         return(
             <div className="board-form">
-                <form onSubmit={this.handleSubmit}>
-                    <div className="form-title">
-                        <input 
-                            type="text" 
-                            value={this.state.title}
-                            placeholder="Add board title" 
-                            onChange={this.update("title")}
-                        />
-                    </div>
+                <form className="board-input-form" onSubmit={this.handleSubmit}>                
+                    <input 
+                        type="text" 
+                        value={this.state.title}
+                        placeholder="Add board title" 
+                        onChange={this.update("title")}
+                    />
                     <input type="submit" value="Create Board" className="create-board-button"/>
                 </form>
             </div>
@@ -36,5 +34,3 @@ export default class BoardForm extends React.Component{
     }
 
 }
-
-// export default BoardForm;

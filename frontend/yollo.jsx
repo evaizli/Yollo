@@ -11,9 +11,6 @@ import { fetchBoard } from "./actions/board_actions";
 
 
 
-
-
-
 document.addEventListener("DOMContentLoaded",()=>{
     let store;
     if (window.currentUser){
