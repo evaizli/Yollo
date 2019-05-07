@@ -7,7 +7,7 @@
 .login-form-container{
     //general sytles
     width: 450px;
-    margin-top: 40px;
+    margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
     padding: 70px;
@@ -76,4 +76,37 @@
         margin-bottom: 10px;
     }
 
+}
+
+.session-footer{
+  font-size: 16px;
+  height: 115px;
+  text-align: center;
+  font-family: $theme-font-base;
+  color: gray;
+  
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+  li {
+      padding: 10px;
+  }
+  .github-logo-session{
+    color: gray;
+    font-size:30px;
+    padding-right: 5px;
+  }
+  .linkedIn-logo-session{
+    color: gray;
+    font-size:30px;
+    padding-right: 5px;
+  }
+  a {
+    color: gray;
+    line-height: 3;
+    text-decoration: underline;
+    font-family: $theme-font-base;
+    
+  }
 }

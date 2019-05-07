@@ -14,6 +14,7 @@ class DemoButton extends React.Component{
 
     render(){
         return(
+            <>
             <div className="outter-demo-container">
             <div className="demo-user-container-center">
                 <div className="left-text-div">
@@ -30,6 +31,20 @@ class DemoButton extends React.Component{
                 </div>
             </div>
         </div>
+         <footer className="splash-page-footer">
+                <ul>
+                    <li>
+                        <i className="github-logo fab fa-github-alt"></i>
+                        <a href="https://github.com/evaizli" target="_blank">Github</a>
+                    </li>
+                    <li>
+                        <i className="linkedIn-logo fab fa-linkedin"></i>
+                        <a href="www.linkedin.com/in/evapan2000" target="_blank">LinkedIn</a>
+                    </li>
+                </ul>
+                <p>© Copyright 2019. All rights reserved.</p>
+        </footer>
+        </>
         );
     }
 

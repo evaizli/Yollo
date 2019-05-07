@@ -16,20 +16,23 @@
         justify-content: flex-end;
         box-shadow: 0 0 10px rgba(0,0,0,0.3);
         align-items: center;
-    
-    .logo{
-       color: white; 
-       font-size: 42px;
-       padding-left: 31px;
-       padding-right: 5px;
-       
-    }
 
-    h2{
-        color: white;
-        font-family: $logo-font-base;
-        font-size: 50px;
-        font-weight: bold;
+    .splash-logo-link {
+        display: flex;
+        .logo{
+        color: white; 
+        font-size: 42px;
+        padding-left: 31px;
+        padding-right: 5px;
+        
+        }
+
+        h2{
+            color: white;
+            font-family: $logo-font-base;
+            font-size: 50px;
+            font-weight: bold;
+        }
     }
     .space1{
         flex-grow: 1;

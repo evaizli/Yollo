@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import DemoButtonContainer from "../demo_session/demo_container";
-import BoardsContainer from "../boards/board_index_container";
 
 
 const Greeting = ({ currentUser, logout }) => {
@@ -9,14 +7,17 @@ const Greeting = ({ currentUser, logout }) => {
     <>
         <header className="fixed-up-nav">
             <nav className="navBar">
-                <i className="logo fab fa-trello"></i>
-                <h2>Yollo</h2>
+                <Link to="/" className="splash-logo-link">
+                    <i className="logo fab fa-trello"></i>
+                    <h2>Yollo</h2>
+                </Link>
             
                 <div className="space1"></div>
                 <Link to="/login">Log In</Link>
                 <Link to="/signup"><span>Sign Up</span></Link>
             </nav>
         </header>
+
     </>
     );
     const personalGreeting = () => (

@@ -114,6 +114,19 @@ class SessionForm extends React.Component{
 
                 </form>
                 </div>
+                <footer className="session-footer">
+                    <ul>
+                        <li>
+                            <i className="github-logo-session fab fa-github-alt"></i>
+                            <a href="https://github.com/evaizli" target="_blank">Github</a>
+                        </li>
+                        <li>
+                            <i className="linkedIn-logo-session fab fa-linkedin"></i>
+                            <a href="www.linkedin.com/in/evapan2000" target="_blank">LinkedIn</a>
+                        </li>
+                    </ul>
+                    <p>© Copyright 2019. All rights reserved.</p>
+                </footer>
             </div>
         );
     }
