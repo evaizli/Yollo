@@ -122,7 +122,7 @@ class SessionForm extends React.Component{
                         </li>
                         <li>
                             <i className="linkedIn-logo-session fab fa-linkedin"></i>
-                            <a href="www.linkedin.com/in/evapan2000" target="_blank">LinkedIn</a>
+                            <a href="https://linkedin.com/in/evapan2000" target="_blank">LinkedIn</a>
                         </li>
                     </ul>
                     <p>© Copyright 2019. All rights reserved.</p>

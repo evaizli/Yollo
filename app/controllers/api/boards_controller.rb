@@ -11,7 +11,7 @@ class Api::BoardsController < ApplicationController
         if @board.save
             @board_share = BoardShare.new(user_id: current_user.id, board_id: @board.id) 
             @board_share.save
-            render json: :show
+            render :show
         else
             render json: @board.errors.full_messages, status: 422
         end 

@@ -12,7 +12,7 @@ const boardsReducer = (state = {}, action) => {
         case RECEIVE_BOARDS:
             return action.boards;
         case RECEIVE_BOARD:
-
+        debugger;
             newState = merge({}, state, {[action.board.id]: action.board });
             return newState;
         default:
