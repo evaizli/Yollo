@@ -1,15 +1,13 @@
 ## to add code later 
 
 json.set! "board" do
-    json.extract! @board, :id, :title
-    json.set! @board.lists do 
-    :lists
+    json.extract! @board, :id, :title, :list_ids 
 end 
 
 json.set! "lists" do 
     @board.lists.each do |list|
         json.set! list.id do 
-            json.extract! list, :id, :title, :board_id
+            json.extract! list, :id, :title, :board_id, :card_ids
         end 
     end 
 end 

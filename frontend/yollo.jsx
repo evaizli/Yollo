@@ -9,8 +9,9 @@ import Root from "./components/root";
 //testing
 import { fetchBoard } from "./actions/board_actions";
 import { createList, updateList, deleteList } from "./actions/list_actions";
+import { createCard, updateCard, deleteCard} from "./actions/card_actions";
 
-
+    
 
 
 document.addEventListener("DOMContentLoaded",()=>{
@@ -33,6 +34,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     window.createList = createList;
     window.updateList = updateList;
     window.deleteList = deleteList;
+    window.createCard = createCard;
+    window.updateCard = updateCard;
+    window.deleteCard = deleteCard;
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store}/>, root);
 });

@@ -31,7 +31,7 @@ export const updateList = (list) => {
 
 export const deleteList = (id) => {
     return $.ajax({
-        method: "PATCH",
+        method: "DELETE",
         url: `/api/lists/${id}`
     });
 };
