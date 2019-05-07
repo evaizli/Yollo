@@ -7,6 +7,7 @@ import Root from "./components/root";
 
 
 //testing
+import { fetchBoard } from "./actions/board_actions";
 
 
 
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     }
     window.getState=store.getState;
     window.dispatch=store.dispatch;
+    window.fetchBoard = fetchBoard;
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store}/>, root);
 });

@@ -27,10 +27,10 @@ class Api::BoardsController < ApplicationController
     end
 
 #to be implemented during list & card mvp
-    # def show
-    #     @board = Board.find(params[:id])
-    #     render :show
-    # end 
+    def show
+        @board = Board.find(params[:id])
+        render :show
+    end 
 
      
 # hold for later if want to implement destroy functionality

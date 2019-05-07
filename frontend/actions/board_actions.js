@@ -12,9 +12,11 @@ export const receiveBoards = (boards) =>({
 });
 
 
-export const receiveBoard = (board) => ({
+export const receiveBoard = ({board, lists, cards}) => ({
     type: RECEIVE_BOARD,
-    board: board
+    board: board,
+    lists: lists,
+    cards: cards
 });
 
 export const receiveBoardErrors = errors =>({
@@ -38,21 +40,21 @@ export const fetchBoards = () => dispatch => {
 
 export const fetchBoard = (id) => dispatch => {
     return (
-        ApiUtil.fetchBoard(id).then(board => dispatch(receiveBoard(board)),
+        ApiUtil.fetchBoard(id).then(payload => dispatch(receiveBoard(payload)),
         err => dispatch(receiveBoardErrors(err.responseJSON)))
     );
 };
 
 export const createBoard = (board) => dispatch => {
     return (
-        ApiUtil.createBoard(board).then(board => dispatch(receiveBoard(board)), 
+        ApiUtil.createBoard(board).then(payload => dispatch(receiveBoard(payload)), 
         err => dispatch(receiveBoardErrors(err.responseJSON)))
     );
 };
 
 export const updateBoard = (board) => dispatch => {
     return (
-        ApiUtil.updateBoard(board).then(board => dispatch(receiveBoard(board)),
+        ApiUtil.updateBoard(board).then(payload => dispatch(receiveBoard(payload)),
         err => dispatch(receiveBoardErrors(err.responseJSON)))
     );
 };
