@@ -7,8 +7,8 @@ class Api::ListsController < ApplicationController
 
     def create
         @list = List.new(list_params)
-        @list.board_id = @list.board.id
         if @list.save
+            @board = @list.board
             render :show
         else 
             render json: @list.errors.full_messages, status: 422
@@ -26,18 +26,18 @@ class Api::ListsController < ApplicationController
 
     def destroy
         @list = List.find(params[:id])
-        debugger
+        @list.destroy
+        render json: @list
+
         @list.cards.each do |card|
             card.destroy
         end 
-        @list.destroy
-        render json: @list
     end 
 
     private
 
     def list_params
-        params.require(:list).permit(:title)
+        params.require(:list).permit(:title, :board_id)
     end 
 
 end

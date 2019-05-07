@@ -1,4 +1,3 @@
-// do i need util for fetchcards? no url route how? 
 
 export const fetchLists = () => {
     return $.ajax({

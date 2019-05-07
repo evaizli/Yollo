@@ -1,7 +1,9 @@
 ## to add code later 
 
 json.set! "board" do
-    json.extract! @board, :id, :title, :lists
+    json.extract! @board, :id, :title
+    json.set! @board.lists do 
+    :lists
 end 
 
 json.set! "lists" do 
