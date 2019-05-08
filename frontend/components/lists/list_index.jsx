@@ -5,15 +5,14 @@ import  ListIndexItem from "./list_index_item";
 class ListIndex extends React.Component{
 
     render(){
-        // const { lists, deleteList, updateList, createList } = this.props;
-        // // debugger
-        let listIndex = Object.values(this.props.lists).map( list => {
-            // debugger
+        const { lists, deleteList, updateList, createList, cards} = this.props;
+        let listIndex = Object.values(lists).map( list => {
             return(
                 <ListIndexItem 
                     key={list.id}
                     list={list}
-                    deleteList={this.props.deleteList}
+                    deleteList={deleteList}
+                    cards = {cards}
                 />
             );
         });

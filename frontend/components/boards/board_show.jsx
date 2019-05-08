@@ -29,7 +29,7 @@ class BoardShow extends React.Component {
                     </div>
                     <ul>
                         <li> 
-                          <ListIndexContainer lists={lists}/>
+                          <ListIndexContainer lists={lists} cards={cards}/>
                         </li>
                     </ul>
                 </div>
