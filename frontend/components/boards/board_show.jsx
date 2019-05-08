@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import ListIndexContainer from "../lists/list_index_container";
 
 class BoardShow extends React.Component {
+    constructor(props){
+        super(props);
+        // debugger
+    }
 
     componentDidMount(){
         let boardId = this.props.match.params.boardId;
@@ -16,7 +20,7 @@ class BoardShow extends React.Component {
     // }
 
     render() {
-        const { board, lists, cards } = this.props;
+        const { board} = this.props;
         if (!board){
             return null;
         } else{
@@ -27,11 +31,9 @@ class BoardShow extends React.Component {
                             {board.title}
                         </div>
                     </div>
-                    <ul>
-                        <li> 
-                          <ListIndexContainer lists={lists} cards={cards}/>
-                        </li>
-                    </ul>
+                    <div className="board-show-list-index-container">
+                        <ListIndexContainer/>
+                    </div>
                 </div>
             );
         }

@@ -10,8 +10,21 @@
     margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
-    padding: 70px;
+    padding: 70px 90px;
     font-family: $theme-font-base;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 
     h1{
         font-size: 38px;

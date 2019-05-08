@@ -1,27 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import  ListIndexItem from "./list_index_item";
+import  ListIndexItemContainer from "./list_index_item_container";
+// import CreateListForm from "./create_list_form";
+import CreateListFormContainer from "./create_list_form_container";
 
 class ListIndex extends React.Component{
 
     render(){
         const { lists, deleteList, updateList, createList, cards} = this.props;
-        let listIndex = Object.values(lists).map( list => {
+        let listIndex = lists.map( list => {
+            
             return(
-                <ListIndexItem 
+                <ListIndexItemContainer 
                     key={list.id}
                     list={list}
-                    deleteList={deleteList}
-                    cards = {cards}
+                    cardIds={list.cardIds}
                 />
             );
         });
         return(
-            <div>
-                <ul>
-                    {listIndex}
-                </ul>
-            </div>
+
+                <div>
+                    <ul className="list-title-ul">
+                        {listIndex}
+                        <CreateListFormContainer />
+                    </ul>
+                </div>
         );
     }
 

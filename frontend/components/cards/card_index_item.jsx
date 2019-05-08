@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardIndexItem = ({card}) =>{
+const CardIndexItem = ({card, updateList}) =>{
     return(
         <div>
             {card.title}
