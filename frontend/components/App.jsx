@@ -7,6 +7,7 @@ import { Route, Switch, Redirect, Link, HashRouter } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import Modal from './modal';
 import demoContainer from "./demo_session/demo_container";
+import BoardShowContainer from "./boards/board_show_container";
 
 
 
@@ -20,6 +21,7 @@ const App = () =>(
         <Modal/>
         <Switch>
             <ProtectedRoute exact path="/boards" component={BoardsContainer}/>
+            <ProtectedRoute exact path="/boards/:boardId" component={BoardShowContainer}/>
             <AuthRoute path="/signup" component={SignupFormContainer}/>
             <AuthRoute path="/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/" component={demoContainer}/>

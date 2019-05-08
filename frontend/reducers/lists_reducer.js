@@ -7,7 +7,7 @@ const listsReducer = (state = {}, action) =>{
     let newState;
     switch (action.type){
         case RECEIVE_BOARD:
-            return action.lists;
+            return action.lists || [];
         case RECEIVE_LIST:
             newState = merge({}, state, {[action.list.id]: action.list});
             return newState;

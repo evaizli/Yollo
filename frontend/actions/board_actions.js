@@ -13,12 +13,14 @@ export const receiveBoards = (boards) =>({
 });
 
 
-export const receiveBoard = ({board, lists, cards}) => ({
-    type: RECEIVE_BOARD,
-    board: board,
-    lists: lists,
-    cards: cards
-});
+export const receiveBoard = ({board, lists, cards}) => {
+    return ({
+        type: RECEIVE_BOARD,
+        board: board,
+        lists: lists,
+        cards: cards
+    });
+};
 
 export const receiveBoardErrors = errors =>({
     type: RECEIVE_BOARD_ERRORS,

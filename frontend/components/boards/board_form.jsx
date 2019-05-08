@@ -3,7 +3,7 @@ import React from "react";
 export default class BoardForm extends React.Component{
     constructor(props){
         super(props);
-        // debugger
+
         this.state = {title: props.board.title};
         this.handleSubmit = this.handleSubmit.bind(this);
     }

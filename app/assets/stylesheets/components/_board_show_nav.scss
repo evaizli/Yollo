@@ -1,0 +1,19 @@
+@import "../base/color.scss";
+@import "../base/fonts.scss";
+@import "../base/mixin.scss";
+
+
+.board-show{
+    font-family: $theme-font-base;
+    background: $theme-background-color-login-nav;
+    height: 45px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    .board-show-navbar{
+        color: white;
+        font-size: 23px;
+        padding-top: 14px;
+    }
+}

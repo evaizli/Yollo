@@ -29,7 +29,12 @@ class Api::BoardsController < ApplicationController
 #to be implemented during list & card mvp
     def show
         @board = Board.find(params[:id])
-        render :show
+        if @board
+            render :show
+        else
+            render json: "This board does not exist", status: 422
+        end 
+        
     end 
 
      
