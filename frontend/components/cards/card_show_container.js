@@ -5,6 +5,8 @@ import { deleteCard } from "../../actions/card_actions";
 
 
 const mapStateToProps = (state, ownProps) => {
+    const listId = state.entities.cards[ownProps.id].listId;
+
     return ({
         card: state.entities.cards[ownProps.id]
     });
@@ -16,4 +18,4 @@ const mapDispatchToProps = dispatch => {
     });
 };
 
-export default connect(mapStateToProps, null)(CardShow);
+export default connect(mapStateToProps, mapDispatchToProps)(CardShow);

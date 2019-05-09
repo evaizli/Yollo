@@ -53,12 +53,3 @@ export const clearErrors = () => dispatch => {
     return (dispatch(receiveCardErrors([])));
 };
 
-
-
-
-
-//fetchCards
-//fetchCard
-//createCard
-//updateCard
-//deleteCard

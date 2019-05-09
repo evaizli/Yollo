@@ -1,20 +1,25 @@
 import React from "react";
-import AddCardDetailContainer from "./add_card_detail_container";
+import AddCardDetailContainer from "./edit_description_container";
+
 
 class CardShow extends React.Component{
     constructor(props){
         super(props);
-        this.state = this.props.card;
+        this.state = {
+            card: this.props.card,
+            editMode: false,
+
+        }
     }
 
     //need to create for on submit & bind this 
     descriptions(){ 
-       return (this.state.description.length === 0) ? "no description" : this.state.description;
+        return (this.state.editMode) ? <EditDescriptionContainer card={this.state.card}/> : this.state.card.description;
     }
     
 
     render(){
-        const {title, description, dueDate} = this.state;
+        const {id, title, deleteCard, description, dueDate} = this.state.card;
         
         return (
             <div>
@@ -22,8 +27,9 @@ class CardShow extends React.Component{
 
                 <div>
                     <h2>description</h2>
-                    {this.descriptions()}
+                    <div onClick={()=> this.setState({editMode: true})}>{this.descriptions()}</div>
                 </div>
+                <button onClick={() => deleteCard(id)}>Delete Card</button>
 
             </div>
         );
