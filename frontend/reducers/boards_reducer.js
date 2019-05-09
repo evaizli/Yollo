@@ -1,5 +1,5 @@
 import { RECEIVE_BOARDS, RECEIVE_BOARD } from "../actions/board_actions";
-import { REMOVE_LIST } from "../actions/card_actions";
+import { REMOVE_LIST } from "../actions/list_actions";
 
 import { merge } from "lodash";
 

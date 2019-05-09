@@ -14,7 +14,7 @@ const ListIndexItem = (props) => {
                 <div className="space"></div>
                 <button className="delete-list-button" onClick={() => deleteList(list.id)}>Delete</button>
             </div>
-            <CardIndexContainer cards={cards} />
+            <CardIndexContainer listId={list.id} cards={cards} />
         </li>
         </>
     );

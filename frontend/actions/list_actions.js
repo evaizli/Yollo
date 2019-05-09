@@ -24,7 +24,7 @@ export const clearListErrors = () => {
 export const removeList = (list) => {
     return ({
         type: REMOVE_LIST,
-        listId: list.id
+        list: list
     });
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import CardIndexItem from "./card_index_item";
-import CreateCardContainer from "./create_card_container";
+import CreateCardFormContainer from "./create_card_form_container";
+
 
 const CardIndex = (props) =>{
     const cards = Object.values(props.cards).map((card) => {
@@ -15,8 +16,8 @@ const CardIndex = (props) =>{
 
     return(
         <div className="card-index-container">
-            {cards}
-            {/* <CreateCardContainer /> */}
+                {cards}
+                <CreateCardFormContainer listId={props.listId}/>
         </div>
     );
 };

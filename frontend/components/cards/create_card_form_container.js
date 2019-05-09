@@ -5,8 +5,8 @@ import { createCard } from "../../actions/card_actions";
 const mapStateToProps = (state, ownProps) => {
     return ({
         title: "",
-        // description 
-        formType: "Create Card"
+        formType: "Create Card",
+        listId: ownProps.listId
     });
 };
 

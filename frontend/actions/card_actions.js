@@ -22,7 +22,6 @@ export const clearCardErrors = () => {
     };
 };
 export const removeCard = (card) => {
-    // debugger;
     return ({
         type: REMOVE_CARD,
         card: card

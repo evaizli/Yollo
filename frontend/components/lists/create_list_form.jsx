@@ -35,7 +35,11 @@ class CreateListForm extends React.Component{
                         onChange={this.update("title")}
                         placeholder="+ Add another list"
                     />
-                    <input className="create-list-button" type="submit" value={this.props.formType}/>
+                    <input 
+                        className="create-list-button" 
+                        type="submit" 
+                        value={this.props.formType}
+                    />
                 </form>
             </div>
         );

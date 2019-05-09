@@ -3,10 +3,27 @@ import React from "react";
 class CreateCardForm extends React.Component{
     constructor(props){
         super(props);
+        this.state = {
+            title: this.props.title,
+            list_id: this.props.listId
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    update(field) {
+        return (e) => {
+            this.setState({ [field]: e.target.value });
+        };
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.createCard(this.state);
+        this.setState({ title: "" });
+    }
 
     render(){
+        
         return(
             <div className="create-card-form-container">
                 <form onSubmit={this.handleSubmit}>
@@ -17,11 +34,14 @@ class CreateCardForm extends React.Component{
                         onChange={this.update("title")}
                         placeholder = "+ Add another card"
                     />
-                    <input className="create-card-button" type="submit" value ={this.props.formType}/>
+                    <input 
+                        className="create-card-button" 
+                        type="submit" 
+                        value ={this.props.formType}
+                    />
                 </form>
-
             </div>
-        )
+        );
     }
 }
 
