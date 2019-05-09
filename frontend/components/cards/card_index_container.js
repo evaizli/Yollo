@@ -1,14 +1,16 @@
 import { connect } from "react-redux";
-import ListIndex from "./list_index";
-import { deleteList, updateList, createList } from "../../actions/list_actions";
+import CardIndex from "./card_index";
+import { deleteCard, updateCard, createCard } from "../../actions/card_actions";
+import { openModal } from "../../actions/modal_actions";
 
 
 const mapDispatchToProps = dispatch => {
     return ({
-        deleteList: (id) => dispatch(deleteList(id)),
-        updateList: (list) => dispatch(updateList(list)),
-        createList: (list) => dispatch(createList(list))
+        deleteCard: (id) => dispatch(deleteCard(id)),
+        updateCard: (list) => dispatch(updateCard(list)),
+        createCard: (list) => dispatch(createCard(list)),
+        openModal: (id) => dispatch(openModal("open card", {id: id}))
     });
 };
 
-export default connect(null, mapDispatchToProps)(ListIndex);
+export default connect(null, mapDispatchToProps)(CardIndex);

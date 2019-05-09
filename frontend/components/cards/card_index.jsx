@@ -7,6 +7,7 @@ const CardIndex = (props) =>{
             <CardIndexItem 
                 key={card.id}
                 card={card}
+                openModal = {props.openModal}
             />
         );
     });

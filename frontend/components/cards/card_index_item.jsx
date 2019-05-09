@@ -1,8 +1,8 @@
 import React from 'react';
 
-const CardIndexItem = ({card, updateList}) =>{
+const CardIndexItem = ({card, updateList, openModal}) =>{
     return(
-        <div>
+        <div onClick={ () => openModal(card.id)}>   
             {card.title}
         </div>
     );
