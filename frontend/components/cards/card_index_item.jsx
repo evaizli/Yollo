@@ -2,7 +2,7 @@ import React from 'react';
 
 const CardIndexItem = ({card, updateList, openModal}) =>{
     return(
-        <div onClick={ () => openModal(card.id)}>   
+        <div className="card-index-div" onClick={ () => openModal(card.id)}>   
             {card.title}
         </div>
     );

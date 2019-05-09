@@ -20,7 +20,7 @@ class ListIndex extends React.Component{
         });
         return(
 
-                <div>
+                <div className="list-index-container">
                     <ul className="list-title-ul">
                         {listIndex}
                         <CreateListFormContainer />

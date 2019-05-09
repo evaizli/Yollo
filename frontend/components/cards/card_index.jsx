@@ -14,8 +14,8 @@ const CardIndex = (props) =>{
     });
 
     return(
-        <div>
-            <div>{cards}</div>
+        <div className="card-index-container">
+            {cards}
             {/* <CreateCardContainer /> */}
         </div>
     );
