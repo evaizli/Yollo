@@ -1,7 +1,5 @@
-import {
-    RECEIVE_BOARDS,
-    RECEIVE_BOARD
-} from "../actions/board_actions";
+import { RECEIVE_BOARDS, RECEIVE_BOARD } from "../actions/board_actions";
+import { REMOVE_LIST } from "../actions/card_actions";
 
 import { merge } from "lodash";
 
@@ -13,6 +11,12 @@ const boardsReducer = (state = {}, action) => {
             return action.boards;
         case RECEIVE_BOARD:
             newState = merge({}, state, {[action.board.id]: action.board });
+            return newState;
+        case REMOVE_LIST:
+            newState = merge({},state);
+            const board = newState[action.list.boardId];
+            const removeIndex = board.listIds.indexOf(action.list.id);
+            board.listIds.splice(removeIndex, 1);
             return newState;
         default:
             return state;

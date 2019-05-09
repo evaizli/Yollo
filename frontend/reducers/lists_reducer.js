@@ -1,6 +1,7 @@
 import { RECEIVE_BOARD } from "../actions/board_actions";
 import { RECEIVE_LIST, REMOVE_LIST } from "../actions/list_actions";
 import { merge } from "lodash";
+import { REMOVE_CARD } from "../actions/card_actions";
 
 const listsReducer = (state = {}, action) =>{
     Object.freeze(state);
@@ -14,6 +15,12 @@ const listsReducer = (state = {}, action) =>{
         case REMOVE_LIST:
             newState = merge({}, state);
             delete newState[action.listId];
+            return newState;
+        case REMOVE_CARD:
+            newState= merge({},state);
+            const list = newState[action.card.listId];
+            const removeIndex = list.cardIds.indexOf(action.card.id);
+            list.cardIds.splice(removeIndex, 1);
             return newState;
         default: 
             return state;

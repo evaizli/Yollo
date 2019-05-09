@@ -28,7 +28,7 @@ export default class BoardForm extends React.Component{
                         placeholder="Add board title" 
                         onChange={this.update("title")}
                     />
-                    <input className="create-board-modal-buttom" type="submit" value="Create Board" className="create-board-button"/>
+                    <input className="create-board-modal-button" type="submit" value="Create Board" className="create-board-button"/>
                 </form>
             </div>
         );

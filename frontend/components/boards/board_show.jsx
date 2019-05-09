@@ -9,17 +9,20 @@ class BoardShow extends React.Component {
     }
 
     componentDidMount(){
+        // debugger
         let boardId = this.props.match.params.boardId;
         this.props.fetchBoard(parseInt(boardId));
     }
 
-    // componentDidUpdate(prevProps){
-    //     if (prevProps.board.id !== this.props.match.params.boardId){
-    //         this.props.fetchBoard(this.props.match.params.boardId);
-    //     }
-    // }
+    componentDidUpdate(prevProps){
+        // debugger
+        if (prevProps.match.params.boardId !== this.props.match.params.boardId){
+            this.props.fetchBoard(this.props.match.params.boardId);
+        }
+    }
 
     render() {
+        // debugger
         const { board} = this.props;
         if (!board){
             return null;

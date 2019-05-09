@@ -1,4 +1,5 @@
 import * as ApiUtil from "../util/card_api_util";
+import { debug } from "util";
 
 export const RECEIVE_CARD = "RECEIVE_CARD";
 export const RECEIVE_CARD_ERRORS = "RECEIVE_CARD_ERRRORS";
@@ -20,10 +21,11 @@ export const clearCardErrors = () => {
         type: CLEAR_CARD_ERRORS
     };
 };
-export const removeCard = (id) => {
+export const removeCard = (card) => {
+    // debugger;
     return ({
         type: REMOVE_CARD,
-        cardId: id
+        card: card
     });
 };
 

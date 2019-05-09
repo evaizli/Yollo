@@ -1,5 +1,6 @@
 import React from "react";
 import AddCardDetailContainer from "./edit_description_container";
+import { closeModal } from "../../actions/modal_actions";
 
 
 class CardShow extends React.Component{
@@ -8,10 +9,12 @@ class CardShow extends React.Component{
         this.state = {
             card: this.props.card,
             editMode: false,
-            deleteCard: this.deleteCard
+            deleteCard: this.props.deleteCard,
+            closeModal: this.props.closeModal
 
         };
     }
+
 
     //need to create for on submit & bind this 
     descriptions(){ 
@@ -20,7 +23,7 @@ class CardShow extends React.Component{
     
 
     render(){
-        const {id, title, deleteCard, description, dueDate} = this.state.card;
+        const {id, title, description, dueDate} = this.state.card;
         
         return (
             <div>
@@ -30,7 +33,7 @@ class CardShow extends React.Component{
                     <h2>description</h2>
                     <div onClick={()=> this.setState({editMode: true})}>{this.descriptions()}</div>
                 </div>
-                <button onClick={()=>deleteCard(id)}>Delete Card</button>
+                <button onClick={()=>{this.state.deleteCard(id); this.state.closeModal();}}>Delete Card</button>
 
             </div>
         );

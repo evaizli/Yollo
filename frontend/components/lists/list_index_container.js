@@ -3,7 +3,6 @@ import ListIndex from "./list_index";
 import { deleteList, updateList, createList } from "../../actions/list_actions";
 
 const mapStateToProps = (state, ownProps) => {
-
     return({
         lists: Object.values(state.entities.lists)
     });
