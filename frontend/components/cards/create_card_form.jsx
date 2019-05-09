@@ -26,7 +26,7 @@ class CreateCardForm extends React.Component{
         
         return(
             <div className="create-card-form-container">
-                <form onSubmit={this.handleSubmit}>
+                <form className="create-card-form"onSubmit={this.handleSubmit}>
                     <input 
                         className = "create-card-text-input"
                         type="text" 

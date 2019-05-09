@@ -45,6 +45,7 @@
         width: 300px;
         margin-left: 10px;
         border-radius: 5px;
+        height: 100%;
 
         .list-index-item-nav{
             display: flex;
@@ -111,13 +112,16 @@
 
         .create-list-form{
             display: flex;
+            flex-direction: column;
             .create-list-text-input{
-                margin-left: 15px;
+                margin-left: 8px;
                 background:$theme-background-color-nav;
                 border-color: transparent;
-                height: 40px;
+                height: 60px;
                 cursor: pointer;
-
+                font-size: 14px;
+                width: 270px;
+                border-radius: 5px;
             }
 
         }
@@ -127,19 +131,73 @@
             border-radius: 10px;
             margin: 5px;
             cursor: pointer;
-            background: $list-background-color;
+            background: white;
             color: $list-text-color;
-            height: 20px;
+            height: 33px;
             font-size: 13px;
-            position: relative;
             top: 30px;
-            right: -55px;
             border-width: 0px;
+            width: 85px;
+            margin-left: 8px;
+        }
+        .create-list-text-input:hover{
+            background: white;
         }
     }
     
 }
 
 
+input[type="text"]::placeholder{
+    color:black;
+    font-family: $theme-font-base;
+}
 
+
+.create-card-form-container{
+    display: flex;
+        flex-direction: row;
+        font-family: $theme-font-base;
+        background: $list-background-color;;
+        width: 300px;
+        margin-left: -5px;
+        border-radius: 5px;
+        margin-right: 10px;
+        height: 60px;
+
+    .create-card-form{
+        display: flex;
+        flex-direction: column;
+    }
+    .create-card-text-input{
+        margin-left: 5px;
+        background: $list-background-color;
+        border-color: transparent;
+        height: 60px;
+        cursor: pointer;
+        font-size: 14px;
+        width: 284px;
+        border-radius: 5px;
+    }
+    .create-card-button{
+        font-family:  $theme-font-base;
+        justify-content: right;
+        border-radius: 10px;
+        margin: 5px;
+        cursor: pointer;
+        background: white;
+        color: $list-text-color;
+        height: 33px;
+        font-size: 13px;
+        top: 30px;
+        border-width: 0px;
+        width: 85px;
+        margin-left: 15px;
+    }
+}
+
+
+.create-card-text-input:hover{
+    background: white;
+}
 

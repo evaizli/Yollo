@@ -25,6 +25,7 @@ const listsReducer = (state = {}, action) =>{
             return newState;
         case RECEIVE_CARD:
             newState = merge({}, state);
+            newState[action.card.listId].cardIds = newState[action.card.listId].cardIds === undefined ? [] : newState[action.card.listId].cardIds; 
             newState[action.card.listId].cardIds.push(action.card.id);
             return newState; 
         default: 
