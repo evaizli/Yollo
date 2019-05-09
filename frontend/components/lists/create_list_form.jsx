@@ -27,15 +27,16 @@ class CreateListForm extends React.Component{
     render(){
         // debugger
         return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
+            <div className="create-list-form-container">
+                <form className="create-list-form" onSubmit={this.handleSubmit}>
                     <input 
+                        className="create-list-text-input"
                         type="text" 
                         value={this.state.title} 
                         onChange={this.update("title")}
                         placeholder="+ Add another list"
                     />
-                    <input type="submit" value={this.props.formType}/>
+                    <input className="create-list-buttom" type="submit" value={this.props.formType}/>
                 </form>
             </div>
         );
