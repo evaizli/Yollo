@@ -10,7 +10,6 @@ const ListIndexItem = (props) => {
     return(
         <>
         <li className="list-index-item-li">
-            {/* <EditListFormContainer list={list} /> */}
             <h2>{props.list.title}</h2>
             <button onClick={() => deleteList(list.id)}>Delete</button>
             <CardIndexContainer cards={cards} />
