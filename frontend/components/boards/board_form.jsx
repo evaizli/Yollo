@@ -19,15 +19,16 @@ export default class BoardForm extends React.Component{
 
     render(){
         return(
-            <div className="board-form">
-                <form className="board-input-form" onSubmit={this.handleSubmit}>                
+            <div className="create-board-form-modal-container">
+                <form className="create-board-modal-input-form" onSubmit={this.handleSubmit}>                
                     <input 
+                        className="create-board-modal-input"
                         type="text" 
                         value={this.state.title}
                         placeholder="Add board title" 
                         onChange={this.update("title")}
                     />
-                    <input type="submit" value="Create Board" className="create-board-button"/>
+                    <input className="create-board-modal-buttom" type="submit" value="Create Board" className="create-board-button"/>
                 </form>
             </div>
         );

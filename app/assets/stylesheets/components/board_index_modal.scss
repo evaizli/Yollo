@@ -1,4 +1,6 @@
-
+@import "../base/color.scss";
+@import "../base/fonts.scss";
+@import "../base/mixin.scss";
 
 .modal-background {
   position: fixed;
@@ -14,19 +16,20 @@
   position: absolute;
   top: 17%;
   left: 50%;
-  background: white;
+  background: $theme-background-color-nav;
   min-width: 350px;
   min-height: 150px ;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 
 .open-card-modal-child {
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
   background: white;
   min-width: 350px;
@@ -35,9 +38,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
+  height: 80%;
+  width: 50%;
 }
 
+.create-board-form-model-container{
+  display: flex;
+  
+  .create-board-modal-input-form{
+      font-family: $theme-font-base;
+      display: flex;
+    
+      
+    }
+}
 
+.create-board-modal-input{
+      font-family: $theme-font-base;
+      display: flex;
+      flex-direction: column;
+      height: 40px;
+      width: 300px;
+      margin-bottom: 25px;
+      font-size: 20px;
+      border-radius: 5px;
+      border-color: transparent;
+}
+
+.create-board-modal-buttom{
+    font-family: $theme-font-base;
+    width: 95px;
+    font-size: 60px;
+}
 // input[type=text] {
 //   font-size: 12pt;
 
