@@ -10,24 +10,39 @@
   z-index: 10;
 }
 
-.modal-child {
+.create-board-modal-child {
   position: absolute;
-  top: 50%;
+  top: 17%;
   left: 50%;
   background: white;
-  min-width: 200px;
-  min-height: 200px ;
+  min-width: 350px;
+  min-height: 150px ;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-input[type=text] {
-  font-size: 12pt;
 
+.open-card-modal-child {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  background: white;
+  min-width: 350px;
+  min-height: 150px ;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-input[type=submit] {
-  background: grey;
-}
+
+// input[type=text] {
+//   font-size: 12pt;
+
+// }
+
+// input[type=submit] {
+//   background: grey;
+// }

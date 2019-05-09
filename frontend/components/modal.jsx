@@ -14,7 +14,7 @@ function Modal({ modal, closeModal }) {
             component = <CreateBoardFormContainer />;
             return (
                 <div className="modal-background" onClick={closeModal}>
-                    <div className="modal-child" onClick={e => e.stopPropagation()}>
+                    <div className="create-board-modal-child" onClick={e => e.stopPropagation()}>
                         {component}
                     </div>
                 </div>
@@ -23,7 +23,7 @@ function Modal({ modal, closeModal }) {
                 component = <CardShowContainer id={modal.options.id}/>;
             return (
                 <div className="modal-background" onClick={closeModal}>
-                    <div className="modal-child" onClick={e => e.stopPropagation()}>
+                    <div className="open-card-modal-child" onClick={e => e.stopPropagation()}>
                         {component}
                     </div>
                 </div>
