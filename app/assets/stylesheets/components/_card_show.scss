@@ -22,8 +22,9 @@
 
 
 .card-show-list-title{
-    color: darkgray;
+    color: #565252;
     font-size: 14px;
+    
 }
 .card-show-task-description-container{
     height: 100px;
@@ -41,6 +42,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 15%;
+    color: #565252;
+    text-align: center;
 
 }
 
@@ -48,7 +51,6 @@
     display: flex;
     flex-direction: column;
     font-family: $theme-font-base;
-    width: 300px;
 }
 
 .card-show-description-input{
@@ -60,7 +62,8 @@
     background: darkgray;
     font-family: $theme-font-base;
     resize: none;
-    // width: 100%;
+    width: 100%;
+    margin-bottom: 8px;
 }
 
 .textarea-wraper{
@@ -69,15 +72,15 @@
 
 
 .card-show-description-edit-button{
-    width: 50px;
+    width: 16%;
     font-family: $theme-font-base;
+    font-size: 80%;
 }
 
 .card-show-remove-card-button{
-    width: 80px;
+    width: 16%;
     border-radius: 5px;
     background: gray;
-    height: 27px;
     font-family: $theme-font-base;
 }
 
@@ -85,5 +88,8 @@
     position: absolute;
     bottom: 30px;
     right: 20px;
+    color: white;
+    font-size: 75%;
+
 
 }

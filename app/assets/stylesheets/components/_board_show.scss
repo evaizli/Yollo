@@ -46,6 +46,7 @@
         margin-left: 10px;
         border-radius: 5px;
         height: 100%;
+        padding-bottom: 4px;
 
         .list-index-item-nav{
             display: flex;
@@ -88,6 +89,7 @@
                 font-size: 14px;
                 padding-right: 10px;
                 cursor: pointer;
+                box-shadow: $card-shadow-color;
 
             }
 
@@ -113,6 +115,7 @@
         .create-list-form{
             display: flex;
             flex-direction: column;
+            width: 100%;
             .create-list-text-input{
                 margin-left: 8px;
                 background:$theme-background-color-nav;
@@ -122,6 +125,8 @@
                 font-size: 14px;
                 width: 270px;
                 border-radius: 5px;
+                margin-top: 7px;
+                width: 93%;
             }
 
         }
@@ -159,15 +164,18 @@ input[type="text"]::placeholder{
         flex-direction: row;
         font-family: $theme-font-base;
         background: $list-background-color;;
-        width: 300px;
+        width: 100%;
         margin-left: -5px;
         border-radius: 5px;
         margin-right: 10px;
         height: 60px;
+        
+        
 
     .create-card-form{
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
     .create-card-text-input{
         margin-left: 5px;
@@ -176,8 +184,8 @@ input[type="text"]::placeholder{
         height: 60px;
         cursor: pointer;
         font-size: 14px;
-        width: 284px;
         border-radius: 5px;
+        width: 98%;
     }
     .create-card-button{
         font-family:  $theme-font-base;
@@ -193,6 +201,7 @@ input[type="text"]::placeholder{
         border-width: 0px;
         width: 85px;
         margin-left: 15px;
+
     }
 }
 
