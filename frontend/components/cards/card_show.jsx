@@ -7,9 +7,7 @@ class CardShow extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            card: this.props.card,
-            editMode: false,
-
+            editMode: false
         };
         this.toggleEditMode = this.toggleEditMode.bind(this);
     }
@@ -20,18 +18,12 @@ class CardShow extends React.Component{
 
     descriptions(){ 
         return (this.state.editMode) ? <EditDescriptionContainer toggleEditMode={this.toggleEditMode} 
-            card={this.state.card}/> : this.state.card.description;
+            card={this.props.card}/> : this.props.card.description;
     }
-    
-    componentDidUpdate(prevProps, prevState){
-        if (prevState.card.description !== this.props.card.description){
-            this.setState({card: this.props.card});
-        }
-    }
-    
+
 
     render(){
-        const {id, title, description, dueDate} = this.state.card;
+        const {id, title, description, dueDate} = this.props.card;
         return (
             <div className="card-show-container">
                 <div className="card-show-card-title">{title}</div>
