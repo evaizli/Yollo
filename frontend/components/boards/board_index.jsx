@@ -23,7 +23,7 @@ class Boards extends React.Component{
             <div className="board-index-main">
       
                     <div className="side-navbar-container">
-                        <h2>side bar space holder</h2>
+                        <h2></h2>
                     </div>
 
                     <div className="boards-container">

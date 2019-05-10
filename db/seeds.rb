@@ -19,29 +19,64 @@ user5=User.create(name: "Raphael", email: "raph@nijiaturtle.com", password:"pass
 
 board1=Board.create(title: "Yollo Solo", user_id: user1.id)
 board2=Board.create(title: "SE Asia Eatting Tour", user_id: user1.id)
-board3=Board.create(title: "Hamilton World Tour", user_id: user2.id)
-board4=Board.create(title: "Search for happiness", user_id: user3.id)
-board5=Board.create(title: "World Peace", user_id: user4.id)
+
 
 boardShare1=BoardShare.create(board_id: board1.id, user_id: user1.id)
 boardShare2=BoardShare.create(board_id: board2.id, user_id: user1.id)
-boardShare3=BoardShare.create(board_id: board3.id, user_id: user2.id)
-boardShare4=BoardShare.create(board_id: board4.id, user_id: user3.id)
-boardShare5=BoardShare.create(board_id: board5.id, user_id: user4.id)
-boardShare6=BoardShare.create(board_id: board3.id, user_id: user1.id)
 
 
+
+list0=List.create(title:"QUESTIONS", board_id: board1.id)
 list1=List.create(title:"User Auth MVP1", board_id: board1.id)
 list2=List.create(title:"Boards MVP2", board_id: board1.id)
 list3=List.create(title:"Lists & Cards MVP3", board_id: board1.id)
-list4=List.create(title:"Sharing Boards MVP4", board_id: board1.id)
-list5=List.create(title:"Comments & Due Dates MVP5", board_id: board1.id)
 
-card1=Card.create(title:"resolve gitbut case", description:"check github for notes", list_id: list1.id)
-card2=Card.create(title:"Add CSS on Splash Page", description:"add footer", list_id: list1.id)
-card3=Card.create(title:"Backend Code & Routes", description:"code & test backend", list_id: list2.id)
-card4=Card.create(title:"Frontend Code & Routes", description:"code & test frontend", list_id: list2.id)
-card5=Card.create(title:"Backend Code & Routes", description:"code & test backend", list_id: list3.id)
-card6=Card.create(title:"Frontend Code & Routes", description:"code & test frontend", list_id: list3.id)
-card7=Card.create(title:"Backend Code & Routes", description:"code & test backend", list_id: list4.id)
-card8=Card.create(title:"Frontend Code & Routes", description:"code & test frontend", list_id: list4.id)
+
+card1=Card.create(title:"Design Schema", description:"draft schema and update github wiki", list_id: list1.id)
+card2=Card.create(title:"Desgin Sample State Shape ", description:"ensure a flat data state shape", list_id: list1.id)
+card3=Card.create(title:"Backend Code & Routes", description:"design backend and front end route & update wiki", list_id: list1.id)
+card9=Card.create(title:"Review Project notes & edit", description:"edit & close open items", list_id: list1.id)
+card10=Card.create(title:"Code & Test User Auth ", description:"test and document bugs along the way", list_id: list1.id)
+card11=Card.create(title:"Splash page design & CSS ", description:"landing page, log-in page, session page, footer css", list_id: list1.id)
+
+
+card4=Card.create(title:"Backend Code", description:"ensure a flat data state shape", list_id: list2.id)
+card12=Card.create(title:"Frontend Code", description:"consider how to pass and receive data", list_id: list2.id)
+card13=Card.create(title:"Board index page css ", description:"CSS", list_id: list2.id)
+card14=Card.create(title:"Desgin Sample State Shape ", description:"ensure a flat data state shape", list_id: list2.id)
+
+
+card5=Card.create(title:"backend Code", description:"ensure a flat data state shape", list_id: list3.id)
+card6=Card.create(title:"Frontend Code", description:"consider how to pass and receive data", list_id: list3.id)
+card7=Card.create(title:"Board index page css ", description:"CSS", list_id: list3.id)
+card8=Card.create(title:"Desgin Sample State Shape ", description:"ensure a flat data state shape", list_id: list3.id)
+
+card14=Card.create(title:"Ronil Questions", description:"How should i approach this project?", list_id: list0.id)
+card15=Card.create(title:"General Questions", description:"How to debug?", list_id: list0.id)
+
+
+travel1=List.create(title:"Travel Logistics", board_id: board2.id)
+travel2=List.create(title:"Plan Itinerary", board_id: board2.id)
+travel3=List.create(title:"Must Eat", board_id: board2.id)
+
+card16=Card.create(title:"Finalize countries", description:"countries, routes", list_id: travel1.id)
+card17=Card.create(title:"Obatin Visa", description:"Research Visa requirement", list_id: travel1.id)
+card18=Card.create(title:"Purchase flgiths", description:"Whatch flight prices and puchase cheap flights", list_id: travel1.id)
+card19=Card.create(title:"Finalize travel dates", description:"When do we want to travel?", list_id: travel1.id)
+
+card20=Card.create(title:"Vietnam", description:"The best place in the world!", list_id: travel2.id)
+card21=Card.create(title:"Thailand", description:"Coconut and BEACH!", list_id: travel2.id)
+card22=Card.create(title:"Indonesia", description:"Bali chilling", list_id: travel2.id)
+card23=Card.create(title:"Laos", description:"Buddhist Temple", list_id: travel2.id)
+card24=Card.create(title:"Burma", description:"Get your palm read", list_id: travel2.id)
+card25=Card.create(title:"Philippines", description:"Philippines", list_id: travel2.id)
+card26=Card.create(title:"Cambodia", description:"Sunrise/ Sunset at Angkor Wat", list_id: travel2.id)
+
+card27=Card.create(title:"Banh Mi & Pho", description:"Vietnam!", list_id: travel3.id)
+card28=Card.create(title:"BanhXeo & Goi Cuon", description:"Vietnam", list_id: travel3.id)
+card29=Card.create(title:"Guay Teow (Noodle Soup)", description:"Thailand", list_id: travel3.id)
+card30=Card.create(title:"Yam Pla Dook Foo (Fried Catfish with Green Mango Salad)", description:"Thailand", list_id: travel3.id)
+card31=Card.create(title:"Tapsilog", description:"Philippines", list_id: travel3.id)
+card32=Card.create(title:"Kare-Kare", description:"Philippines", list_id: travel3.id)
+card33=Card.create(title:"Puto at Dinuguan", description:"Philippines", list_id: travel3.id)
+card34=Card.create(title:"Nom Banh Chok", description:"Cambodia", list_id: travel3.id)
