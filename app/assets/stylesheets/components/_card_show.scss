@@ -1,0 +1,30 @@
+@import "../base/color.scss";
+@import "../base/fonts.scss";
+@import "../base/mixin.scss";
+
+
+
+.card-show-container{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 60%;
+    justify-content: start;
+    text-align: center;
+    font-family: $theme-font-base;
+}
+
+.card-show-card-title{
+    font-size: 24px;
+    color:$theme-background-color-login-nav;
+    padding: 10px;
+
+}
+
+
+
+.card-show-task-description-container{
+    height: 100px;
+    border-radius: 5px;
+    background: purple;
+}

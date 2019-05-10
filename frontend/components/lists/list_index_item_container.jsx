@@ -4,7 +4,7 @@ import { deleteList, updateList } from "../../actions/list_actions";
 
 const mapStateToProps = (state, ownProps) => {
     let cards = ownProps.cardIds ? ownProps.cardIds.map(cardId => state.entities.cards[cardId]) : [];
-    // debugger;
+
     return ({
         cards: cards
     });

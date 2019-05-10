@@ -27,7 +27,7 @@ class EditDescriptionForm extends React.Component {
     }
 
     render(){
-        // debugger
+
         return(
             <div>
                 <form onClick={this.handleSubmit}>
@@ -35,7 +35,9 @@ class EditDescriptionForm extends React.Component {
                         className="card-show-description-input"
                         value={this.state.description} 
                         onChange={this.update("description")}
-                        placeholder="Add a more detailed description">
+                        placeholder="Add a more detailed description"
+                        autoFocus
+                    >
                     </input>
                     <input 
                         className="card-show-description-edit-button"

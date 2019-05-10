@@ -29,9 +29,9 @@
 
 .open-card-modal-child {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  background: white;
+  background:$list-background-color;
   min-width: 350px;
   min-height: 150px ;
   transform: translate(-50%, -50%);
@@ -39,8 +39,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  height: 80%;
-  width: 50%;
+  height: 50%;
+  width: 40%;
 }
 
 .create-board-form-model-container{

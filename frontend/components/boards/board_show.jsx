@@ -5,24 +5,24 @@ import ListIndexContainer from "../lists/list_index_container";
 class BoardShow extends React.Component {
     constructor(props){
         super(props);
-        // debugger
+    
     }
 
     componentDidMount(){
-        // debugger
+     
         let boardId = this.props.match.params.boardId;
         this.props.fetchBoard(parseInt(boardId));
     }
 
     componentDidUpdate(prevProps){
-        // debugger
+
         if (prevProps.match.params.boardId !== this.props.match.params.boardId){
             this.props.fetchBoard(this.props.match.params.boardId);
         }
     }
 
     render() {
-        // debugger
+ 
         const { board} = this.props;
         if (!board){
             return null;
