@@ -4,7 +4,6 @@ import { updateCard } from "../../actions/card_actions";
 
 
 const mapStateToProps = (state, ownProps) => {
-
     return ({
         card: ownProps.card
     });

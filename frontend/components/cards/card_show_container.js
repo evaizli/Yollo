@@ -6,9 +6,11 @@ import { closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state, ownProps) => {
     const listId = state.entities.cards[ownProps.id].listId;
-
+    const listTitle = state.entities.lists[listId].title;
     return ({
-        card: state.entities.cards[ownProps.id]
+        card: state.entities.cards[ownProps.id],
+        listTitle:listTitle
+
     });
 };
 
