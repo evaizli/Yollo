@@ -6,13 +6,6 @@ import configureStore from "./store/store";
 import Root from "./components/root";
 
 
-//testing
-import { fetchBoard } from "./actions/board_actions";
-import { createList, updateList, deleteList } from "./actions/list_actions";
-import { createCard, updateCard, deleteCard} from "./actions/card_actions";
-
-    
-
 
 document.addEventListener("DOMContentLoaded",()=>{
     let store;
@@ -28,15 +21,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     } else {
         store =configureStore();
     }
-    window.getState=store.getState;
-    window.dispatch=store.dispatch;
-    window.fetchBoard = fetchBoard;
-    window.createList = createList;
-    window.updateList = updateList;
-    window.deleteList = deleteList;
-    window.createCard = createCard;
-    window.updateCard = updateCard;
-    window.deleteCard = deleteCard;
+    
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store}/>, root);
 });
