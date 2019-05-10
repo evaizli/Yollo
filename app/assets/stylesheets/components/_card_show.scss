@@ -17,14 +17,73 @@
 .card-show-card-title{
     font-size: 24px;
     color:$theme-background-color-login-nav;
-    padding: 10px;
+    padding-bottom: 3px;
+}
+
+
+.card-show-list-title{
+    color: darkgray;
+    font-size: 14px;
+}
+.card-show-task-description-container{
+    height: 100px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 6px;
+}
+
+.card-show-description-title{
+    text-align: left;
+    font-size: 15px;
+    margin-left: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 15%;
+
+}
+
+.card-show-edit-description-form-container{
+    display: flex;
+    flex-direction: column;
+    font-family: $theme-font-base;
+    width: 300px;
+}
+
+.card-show-description-input{
+    height: 100px;
+    border-radius: 5px;
+    border-color: transparent;
+    color: black;
+    font-size: 17px;
+    background: darkgray;
+    font-family: $theme-font-base;
+    resize: none;
+    // width: 100%;
+}
+
+.textarea-wraper{
 
 }
 
 
+.card-show-description-edit-button{
+    width: 50px;
+    font-family: $theme-font-base;
+}
 
-.card-show-task-description-container{
-    height: 100px;
+.card-show-remove-card-button{
+    width: 80px;
     border-radius: 5px;
-    background: purple;
+    background: gray;
+    height: 27px;
+    font-family: $theme-font-base;
+}
+
+.card-show-remove-card-button{
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+
 }

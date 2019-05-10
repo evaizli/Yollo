@@ -27,10 +27,10 @@ class CardShow extends React.Component{
         return (
             <div className="card-show-container">
                 <div className="card-show-card-title">{title}</div>
-                <div className="card-show-list-title">{this.props.listTitle}</div>
+                <div className="card-show-list-title">in list {this.props.listTitle}</div>
 
                 <div>
-                    <h2>description</h2>
+                    <h2 className="card-show-description-title">Description</h2>
                     <div 
                         className="card-show-task-description-container" 
 
