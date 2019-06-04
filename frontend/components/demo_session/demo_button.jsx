@@ -30,17 +30,11 @@ class DemoButton extends React.Component{
                     <img className="hero-image-demo" src="hero-a.svg" alt=""/>
                 </div>
             </div>
-            <div className="splash-page-container display-flex">
-                <div className="splash-bottom-image display-flex">
-                    <div>Left Image</div>
-                </div>
-                <div className="bottom-splash-middle-text display-flex flex-column">
-                    <div>Start Planning Today</div>
-                    <div>Sign up and use Yollo to get more done!</div>
-                </div>
-                <div className="splash-bottom-image display-flex">
-                    <div>Right Image</div>
-                </div>
+                <div className="splash-page-container display-flex" >
+                    <div className="splash-middle-text display-flex flex-column">
+                        <div>Start Planning Today</div>
+                        <div>Sign up and use Yollo to get more done!</div>
+                    </div>
             </div>
         </div>
          <footer className="splash-page-footer">

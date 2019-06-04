@@ -72,32 +72,27 @@
         align-self: flex-end;
     }
 
-@media (max-width: 1000px){
-    .left-text-div{
-        // color: purple;
-        text-align: center;
-        width: 100%;
-
-    }
-    .demo-user-container-center{
-        flex-direction: column;
-    }
-    .right-image{
-        width: 100%;
-    }
-
-    .hero-image-demo{
-        align-self: center;
-    }
-
-    
-    
-}
 
 
 .splash-page-container{
-    background-color: white;
-    color: red;
+    background-image: url("https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/97db7688a52a697ea9376a5f0fe5d98f/trellians-2x-2.png");
+    background-color: #d6d5d5;
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    width: 100vw;
+    height: 500px;
+    color: black;
+    align-items: center;
+    justify-content: center;
+
+    .splash-middle-text{
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 80%;
+    }
 }
 
 .splash-page-footer{
@@ -131,4 +126,29 @@
         text-decoration: underline;
         font-family: $theme-font-base;
         }
+}
+
+@media (max-width: 1000px){
+    .left-text-div{
+        // color: purple;
+        text-align: center;
+        width: 100%;
+
+    }
+    .demo-user-container-center{
+        flex-direction: column;
+    }
+    .right-image{
+        width: 100%;
+    }
+
+    .hero-image-demo{
+        align-self: center;
+    }
+
+    .splash-page-container{
+        height: 400px;
+        background-position: center;
+    }
+    
 }
