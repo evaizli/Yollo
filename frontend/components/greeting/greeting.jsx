@@ -23,7 +23,9 @@ const Greeting = ({ currentUser, logout }) => {
     const personalGreeting = () => (
     <header className="fixed-login-nav">
         <nav className="login-nav-bar-container" >
-            <i className="home-logo fas fa-home"></i>
+            <Link to="/boards">
+                <i className="home-logo fas fa-home"></i>
+            </Link>
             <Link to="/boards" className="logo-board-container">
                 <i className="login-logo-board fab fa-trello"></i>
                 <div className="board-index-link">Boards</div>
@@ -36,9 +38,10 @@ const Greeting = ({ currentUser, logout }) => {
             </Link>
 
             <div className="space2"></div>
-            <div className="create-board-container">
-                <i className="add-board fas fa-plus"></i>
-            </div>
+            
+            {/* <div className="create-board-container"> */}
+                {/* <i className="add-board fas fa-plus"></i> */}
+            {/* </div> */}
             <button className="logout-button" onClick={logout}>Log Out</button>
         </nav>
     </header>
