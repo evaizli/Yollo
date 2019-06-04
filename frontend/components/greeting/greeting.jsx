@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const Greeting = ({ currentUser, logout }) => {
+
+const Greeting = ({ currentUser, logout, openModal }) => {
     const sessionLinks = () => (
     <>
         <header className="fixed-up-nav">
@@ -11,7 +12,6 @@ const Greeting = ({ currentUser, logout }) => {
                     <i className="logo fab fa-trello"></i>
                     <h2>Yollo</h2>
                 </Link>
-            
                 <div className="space1"></div>
                 <Link to="/login">Log In</Link>
                 <Link to="/signup"><span>Sign Up</span></Link>
@@ -39,9 +39,9 @@ const Greeting = ({ currentUser, logout }) => {
 
             <div className="space2"></div>
             
-            {/* <div className="create-board-container"> */}
-                {/* <i className="add-board fas fa-plus"></i> */}
-            {/* </div> */}
+            <div className="create-board-container" onClick={()=> openModal()}>
+                <i className="add-board fas fa-plus"></i>
+            </div>
             <button className="logout-button" onClick={logout}>Log Out</button>
         </nav>
     </header>

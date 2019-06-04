@@ -33,7 +33,7 @@ class Boards extends React.Component{
                         <ul>
                             {boards}
                             <div className="create-board-container">
-                            <button className="create-board-button" onClick={()=>this.props.openModal()}>Create new board...</button>
+                            <button className="create-board-button" onClick={()=>this.props.openModal()}>Create a New Board</button>
                             </div>
                         </ul>
                     </div>
