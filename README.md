@@ -27,4 +27,10 @@ Yollo, a Trello clone, is a web-based task and project management tool, which it
  * User can sign up, sign in, log out. Guest can use a demo login to try the functional of the site. 
 
 
+## Download & Setup Instructions 
+1. Run `npm install ` to install dependencies and packages 
+2. Run `npm start` to run webpack
+3. Run `rails s` to run rails server
+4. Run `rails db:seed` to seed locally
+
 
