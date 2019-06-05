@@ -28,7 +28,7 @@ class Boards extends React.Component{
 
                     <div className="boards-container">
                         <div className="board-table-header">
-                            <h3>Personal Boards</h3>
+                            <div className="board-index-section-title">Personal Boards</div>
                         </div>
                         <ul>
                             {boards}

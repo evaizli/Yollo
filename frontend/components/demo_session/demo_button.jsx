@@ -31,9 +31,9 @@ class DemoButton extends React.Component{
                 </div>
             </div>
                 <div className="splash-page-container display-flex" >
-                    <div className="splash-middle-text display-flex flex-column">
+                    <div className="splash-middle-text-container display-flex flex-column">
                         <div className="splash-text-title">Start Planning Today</div>
-                        <div>Sign up and use Yollo to get more done!</div>
+                        <div className="splash-text-body">Sign up and use Yollo to get more done!</div>
                     </div>
             </div>
         </div>
