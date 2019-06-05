@@ -32,7 +32,7 @@ class DemoButton extends React.Component{
             </div>
                 <div className="splash-page-container display-flex" >
                     <div className="splash-middle-text display-flex flex-column">
-                        <div>Start Planning Today</div>
+                        <div className="splash-text-title">Start Planning Today</div>
                         <div>Sign up and use Yollo to get more done!</div>
                     </div>
             </div>
