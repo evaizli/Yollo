@@ -14,12 +14,12 @@ class EditDescriptionForm extends React.Component {
     }
 
 
-    componentDidUpdate(prevProps){
-        // if (prevProps.card.description !== this.props.card.description) {
+    // componentDidUpdate(prevProps){
+    //     // if (prevProps.card.description !== this.props.card.description) {
 
 
-        // };
-    }
+    //     // };
+    // }
 
     handleSubmit(e){
         e.preventDefault();
