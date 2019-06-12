@@ -55,10 +55,13 @@
                 color: black;
                 display:flex;
                 justify-content: center;
-                height: 25px;
+                height: auto;
                 margin-top: 10px;
                 margin-left: 5px;
                 padding-left: 10px;
+                font-size: medium;
+                font-weight: 900;
+                word-break: break-word;
             }
             .space{
                 flex-grow: 1;
@@ -66,10 +69,36 @@
             .delete-list-button{
                 font-family:  $theme-font-base;
                 justify-content: right;
-                border-radius: 10px;
+                border-radius: 5px;
+                font-size: smaller;
                 margin: 5px;
+                height: fit-content;
+                width:fit-content;
                 cursor: pointer;
             }
+            .delete-tool-tip-container{
+                position: relative;
+                display: inline-block;
+            }
+            .delete-tool-tip-container .delete-tool-tip-text {
+                visibility: hidden;
+                width: 120px;
+                background-color:$theme-color-submit;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+
+                /* Position the tooltip */
+                position: absolute;
+                z-index: 1;
+                margin-left: 10px;
+                margin-top: 12px;
+                }
+
+                .delete-tool-tip-container:hover .delete-tool-tip-text {
+                visibility: visible;
+                }
         }
 
 

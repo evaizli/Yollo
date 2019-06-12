@@ -12,7 +12,11 @@ const ListIndexItem = (props) => {
             <div className="list-index-item-nav">
                 <h2 className="list-index-item-title">{props.list.title}</h2>
                 <div className="space"></div>
-                <button className="delete-list-button" onClick={() => deleteList(list.id)}>Delete</button>
+                <button className="delete-list-button" onClick={() => deleteList(list.id)}>
+                    <i class="delete-tool-tip-container fas fa-trash-alt">
+                        <span className="delete-tool-tip-text"> Delete this list? </span>
+                    </i>
+                </button>
             </div>
             <CardIndexContainer listId={list.id} cards={cards} />
         </li>
