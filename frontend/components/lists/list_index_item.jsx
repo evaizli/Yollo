@@ -13,7 +13,7 @@ const ListIndexItem = (props) => {
                 <h2 className="list-index-item-title">{props.list.title}</h2>
                 <div className="space"></div>
                 <button className="delete-list-button" onClick={() => deleteList(list.id)}>
-                    <i class="delete-tool-tip-container fas fa-trash-alt">
+                    <i className="delete-tool-tip-container fas fa-trash-alt">
                         <span className="delete-tool-tip-text"> Delete this list? </span>
                     </i>
                 </button>
