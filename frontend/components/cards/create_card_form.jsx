@@ -1,4 +1,5 @@
 import React from "react";
+import Textarea from 'react-textarea-autosize';
 
 class CreateCardForm extends React.Component{
     constructor(props){
@@ -27,7 +28,7 @@ class CreateCardForm extends React.Component{
         return(
             <div className="create-card-form-container">
                 <form className="create-card-form"onSubmit={this.handleSubmit}>
-                    <input 
+                    <Textarea
                         className = "create-card-text-input"
                         type="text" 
                         value ={this.state.title}
