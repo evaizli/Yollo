@@ -46,3 +46,20 @@
         box-sizing: border-box;
         width: -webkit-fill-available;
 }
+
+
+@mixin submitButton {
+        font-family:  $theme-font-base;
+        justify-content: right;
+        border-radius: 10px;
+        margin: 5px;
+        cursor: pointer;
+        background: white;
+        color: $list-text-color;
+        height: fit-content;
+        font-size: 13px;
+        top: 30px;
+        border-width: 0px;
+        width: fit-content;
+        margin-left: 15px;
+}

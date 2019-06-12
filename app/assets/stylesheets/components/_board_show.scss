@@ -161,23 +161,12 @@
 
         }
         .create-list-button{
-            font-family:  $theme-font-base;
-            justify-content: right;
-            border-radius: 10px;
-            margin: 5px;
-            cursor: pointer;
-            background: white;
-            color: $list-text-color;
-            height: 33px;
-            font-size: 13px;
-            top: 30px;
-            border-width: 0px;
-            width: 85px;
-            margin-left: 8px;
+             @include submitButton;
         }
         .create-list-text-input:hover{
             background: white;
         }
+        
     }
     
 }
@@ -219,21 +208,12 @@ input[type="text"]::placeholder{
         resize: none;
     }
     .create-card-button{
-        font-family:  $theme-font-base;
-        justify-content: right;
-        border-radius: 10px;
-        margin: 5px;
-        cursor: pointer;
-        background: white;
-        color: $list-text-color;
-        height: 33px;
-        font-size: 13px;
-        top: 30px;
-        border-width: 0px;
-        width: 85px;
-        margin-left: 15px;
-
+        @include submitButton;
     }
+    .create-card-button::hover{
+        background: $theme-color-submit;
+    }
+
 }
 
 
