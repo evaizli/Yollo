@@ -44,7 +44,6 @@
         margin-left: 10px;
         border-radius: 5px;
         height: 86vh;
-        padding-bottom: 4px;
         overflow: hidden;
 
         .list-index-item-nav{
@@ -53,7 +52,7 @@
             padding-bottom: 5px;
         
             .list-index-item-title{
-                color: black;
+                color: #484040;
                 display:flex;
                 justify-content: center;
                 height: auto;
@@ -115,12 +114,12 @@
                 padding-right: 10px;
                 cursor: pointer;
                 box-shadow: $card-shadow-color;
+                margin-left: 5px;
+                margin-right: 5px;
 
             }
 
         }
-        
-        
         .card-index-div:hover{
                 background: hsla(0,0%,100%,.3);
             }
@@ -195,7 +194,8 @@ input[type="text"]::placeholder{
         width: 100%;
     }
     .create-card-text-input{
-        // margin-left: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
         background: $list-background-color;
         border-color: transparent;
         height: 50px !important;
@@ -203,6 +203,8 @@ input[type="text"]::placeholder{
         font-size: 14px;
         border-radius: 5px;
         resize: none;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .create-card-button{
         @include submitButton;
@@ -217,5 +219,4 @@ input[type="text"]::placeholder{
 .create-card-text-input:hover{
     background: white;
 }
-
 
