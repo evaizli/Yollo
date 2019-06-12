@@ -9,7 +9,8 @@ class CreateListForm extends React.Component{
         super(props);
         this.state={
             title: this.props.title,
-            board_id: this.props.match.params.boardId
+            board_id: this.props.match.params.boardId,
+
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -25,6 +26,7 @@ class CreateListForm extends React.Component{
         this.props.createList(this.state);
         this.setState({title: ""});
     }
+    
 
     render(){
         return(
@@ -34,6 +36,7 @@ class CreateListForm extends React.Component{
                         className="create-list-text-input"
                         type="text" 
                         value={this.state.title} 
+                        // onClick={this.toggle("create-list-button")}
                         onChange={this.update("title")}
                         placeholder="+ Add another list"
                     />

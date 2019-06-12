@@ -33,22 +33,24 @@
         display: flex;
         flex-direction: row;
         margin-top: 93px;
-
     }
 
     .list-index-item-li{
         display: flex;
         flex-direction: column;
         font-family: $theme-font-base;
-        background: $list-background-color;
+        background: transparent;
         width: 300px;
         margin-left: 10px;
         border-radius: 5px;
-        height: 100%;
+        height: 86vh;
         padding-bottom: 4px;
+        overflow: hidden;
 
         .list-index-item-nav{
             display: flex;
+            background:$board-list-background;
+            padding-bottom: 5px;
         
             .list-index-item-title{
                 color: black;
@@ -90,15 +92,20 @@
 
 
         .card-index-container{
-            margin-left: 5px;
-            margin-right: 5px;
+            // margin-left: 5px;
+            // margin-right: 5px;
             word-break: break-word;
-            width: 97%;
+            // width: 97%;
+            overflow-y: auto;
+            background: $board-list-background;
+            padding-bottom: 15px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
 
             .card-index-div{
                 border: 0px outset lightgray;
                 margin-bottom: 10px;
-                background: white;
+                background: $card-background-color;
                 color: $list-text-color;
                 border-radius: 5px;
                 padding-top: 5px;
@@ -188,10 +195,10 @@ input[type="text"]::placeholder{
         width: 100%;
     }
     .create-card-text-input{
-        margin-left: 5px;
+        // margin-left: 5px;
         background: $list-background-color;
         border-color: transparent;
-        height: 60px;
+        height: 50px !important;
         cursor: pointer;
         font-size: 14px;
         border-radius: 5px;

@@ -14,11 +14,9 @@ const boardsReducer = (state = {}, action) => {
             return newState;
         case REMOVE_LIST:
             newState = merge({},state);
-            // debugger
             const board = newState[action.list.board_id];
             const removeIndex = board.listIds.indexOf(action.list.id);
             board.listIds.splice(removeIndex, 1);
-            // debugger
             return newState;
         default:
             return state;

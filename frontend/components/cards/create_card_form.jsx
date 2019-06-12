@@ -6,9 +6,11 @@ class CreateCardForm extends React.Component{
         super(props);
         this.state = {
             title: this.props.title,
-            list_id: this.props.listId
+            list_id: this.props.listId,
+            createCardMode: false 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.toggleCreateMode = this.toggleCreateMode.bind(this);
     }
 
     update(field) {
@@ -23,6 +25,23 @@ class CreateCardForm extends React.Component{
         this.setState({ title: "" });
     }
 
+    toggleCreateMode(){
+        this.setState({createCardMode: !this.state.createCardMode});
+    }
+
+    createCard(){
+        if (this.state.createCardMode){
+            return (
+                <input
+                    className="create-card-button"
+                    type="submit"
+                    value={this.props.formType}
+                />
+            );
+        } 
+        
+    }
+
     render(){
         
         return(
@@ -32,14 +51,11 @@ class CreateCardForm extends React.Component{
                         className = "create-card-text-input"
                         type="text" 
                         value ={this.state.title}
+                        onClick = {() => this.setState({createCardMode: true})}
                         onChange={this.update("title")}
                         placeholder = "+ Add another card"
                     />
-                    <input 
-                        className="create-card-button" 
-                        type="submit" 
-                        value ={this.props.formType}
-                    />
+                    {this.createCard()}
                 </form>
             </div>
         );
