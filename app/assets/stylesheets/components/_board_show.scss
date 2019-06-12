@@ -7,17 +7,16 @@
     font-family: $theme-font-base;
     background: $theme-background-color-login-nav;
     height: 34px;
-    // margin-top: 40px;
     display: flex;
     justify-content: center;
     position: fixed;
-    // position: sticky;
     margin-left: 10px;
     top: 40px;
+    width: 100vw;
 
     .board-show-navbar{
         font-size: 23px;
-        padding-top: 10px;
+        padding-top: 5px;
         color: white;
     }
    
