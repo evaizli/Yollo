@@ -93,6 +93,7 @@
             margin-left: 5px;
             margin-right: 5px;
             word-break: break-word;
+            width: 97%;
 
             .card-index-div{
                 border: 0px outset lightgray;
@@ -176,9 +177,7 @@ input[type="text"]::placeholder{
         font-family: $theme-font-base;
         background: $list-background-color;;
         width: 100%;
-        margin-left: -5px;
         border-radius: 5px;
-        margin-right: 10px;
         height: auto;
         
         
@@ -196,7 +195,6 @@ input[type="text"]::placeholder{
         cursor: pointer;
         font-size: 14px;
         border-radius: 5px;
-        width: 98%;
         resize: none;
     }
     .create-card-button{
