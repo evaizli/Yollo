@@ -12,6 +12,7 @@
     justify-content: start;
     text-align: center;
     font-family: $theme-font-base;
+    position: relative;
 }
 
 .card-show-card-title{
@@ -43,7 +44,6 @@
     margin-left: 4px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-top: 15%;
     color: #565252;
     text-align: center;
 
@@ -68,30 +68,25 @@
     margin-bottom: 8px;
 }
 
-.textarea-wraper{
-
-}
 
 
 .card-show-description-edit-button{
-    width: 16%;
-    font-family: $theme-font-base;
-    font-size: 80%;
+    @include submitButton;
+}
+.card-show-description-edit-button:hover{
+    @include submitHover;
 }
 
 .card-show-remove-card-button{
-    width: 16%;
-    border-radius: 5px;
-    background: gray;
-    font-family: $theme-font-base;
-}
-
-.card-show-remove-card-button{
+    @include submitButton;
     position: absolute;
-    bottom: 30px;
-    right: 20px;
-    color: white;
-    font-size: 75%;
+    top: unset;
+    bottom: 5px;
+    right: 5px;
+    margin-left: unset;
+    
+}
 
-
+.card-show-remove-card-button:hover{
+    @include submitHover;
 }

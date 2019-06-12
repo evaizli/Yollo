@@ -81,23 +81,11 @@
                 display: inline-block;
             }
             .delete-tool-tip-container .delete-tool-tip-text {
-                visibility: hidden;
-                width: 120px;
-                background-color:$theme-color-submit;
-                color: #fff;
-                text-align: center;
-                border-radius: 6px;
-                padding: 5px 0;
-
-                /* Position the tooltip */
-                position: absolute;
-                z-index: 1;
-                margin-left: 10px;
-                margin-top: 12px;
+                @include tooltipGeneral
                 }
 
                 .delete-tool-tip-container:hover .delete-tool-tip-text {
-                visibility: visible;
+                 @include tooltipHoverVisiable;
                 }
         }
 
@@ -150,10 +138,8 @@
                 margin-left: 8px;
                 background:$theme-background-color-nav;
                 border-color: transparent;
-                // height: 60px;
                 cursor: pointer;
                 font-size: 14px;
-                // width: 270px;
                 border-radius: 5px;
                 margin-top: 7px;
                 width: 93%;
@@ -170,7 +156,10 @@
         .create-list-text-input:hover{
             background: white;
         }
-        
+        .create-list-text-input::placeholder{
+            color: white;
+        }
+
     }
     
 }

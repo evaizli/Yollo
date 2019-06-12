@@ -39,8 +39,7 @@ class CardShow extends React.Component{
                     </div>
                 </div>
 
-                {/* <div className="card-show-card-due-date-title"> Due Date:</div>
-                <div className="card-show-card-due-date">{dueDate}</div> */}
+
                 <button 
                     className="card-show-remove-card-button"
                     onClick={()=>{this.props.deleteCard(id); this.props.closeModal();}}>  

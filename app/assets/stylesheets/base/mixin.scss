@@ -68,3 +68,23 @@
         background: $theme-color-submit;
         color: white;
 }
+//parent container and tooltip text
+@mixin tooltipGeneral {
+        visibility: hidden;
+        width: 120px;
+        background-color:$theme-color-submit;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        margin-left: 10px;
+        margin-top: 12px;
+}
+
+@mixin tooltipHoverVisiable {
+        visibility: visible;
+}
