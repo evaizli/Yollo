@@ -1,5 +1,7 @@
 import React from "react";
 import { withRouter } from 'react-router-dom';
+import AutosizeInput from 'react-input-autosize';
+import Textarea from 'react-textarea-autosize';
 
 
 class CreateListForm extends React.Component{
@@ -28,7 +30,7 @@ class CreateListForm extends React.Component{
         return(
             <div className="create-list-form-container">
                 <form className="create-list-form" onSubmit={this.handleSubmit}>
-                    <input 
+                    <Textarea
                         className="create-list-text-input"
                         type="text" 
                         value={this.state.title} 

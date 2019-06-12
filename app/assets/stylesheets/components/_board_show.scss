@@ -140,7 +140,7 @@
         margin-left: 10px;
         border-radius: 5px;
         margin-right: 10px;
-        height: 60px;
+        height: fit-content;
 
         .create-list-form{
             display: flex;
@@ -150,18 +150,22 @@
                 margin-left: 8px;
                 background:$theme-background-color-nav;
                 border-color: transparent;
-                height: 60px;
+                // height: 60px;
                 cursor: pointer;
                 font-size: 14px;
-                width: 270px;
+                // width: 270px;
                 border-radius: 5px;
                 margin-top: 7px;
                 width: 93%;
+                resize: none;
             }
 
         }
         .create-list-button{
              @include submitButton;
+        }
+        .create-list-button:hover{
+             @include submitHover;
         }
         .create-list-text-input:hover{
             background: white;
@@ -210,8 +214,8 @@ input[type="text"]::placeholder{
     .create-card-button{
         @include submitButton;
     }
-    .create-card-button::hover{
-        background: $theme-color-submit;
+    .create-card-button:hover{
+        @include submitHover;
     }
 
 }

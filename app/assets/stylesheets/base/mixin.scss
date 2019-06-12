@@ -63,3 +63,8 @@
         width: fit-content;
         margin-left: 15px;
 }
+
+@mixin submitHover {
+        background: $theme-color-submit;
+        color: white;
+}
