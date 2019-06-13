@@ -14,9 +14,11 @@ class Boards extends React.Component{
     render(){
         const boards = this.props.boards.map(board =>{
             return(
-                <li key={board.id}>
-                <Link to={`boards/${board.id}`}>{board.title}</Link> 
-                </li>
+                <Link to={`boards/${board.id}`} key={board.id}>
+                    <li className="board-index-board-title">
+                        {board.title}
+                    </li>
+                </Link> 
             );
         });
         return(
@@ -32,8 +34,8 @@ class Boards extends React.Component{
                         </div>
                         <ul>
                             {boards}
-                            <div className="create-board-container">
-                            <button className="create-board-button" onClick={()=>this.props.openModal()}>Create a New Board</button>
+                            <div className="create-board-container" onClick={() => this.props.openModal()}>
+                            <button className="create-board-button" >Create a New Board</button>
                             </div>
                         </ul>
                     </div>

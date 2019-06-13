@@ -53,22 +53,24 @@
            li:hover{
                background: $theme-background-color-login-nav;
            }
-           li a {
+          
+           a{
+               text-decoration: none;
+               display: flex;
+           }
+           .board-index-board-title{
                 color: white;
                 text-decoration: none;
-                position: relative;
-                right: 14px;
-                bottom: 26px;
-                font-family: $theme-font-base;
-                font-weight: 700;
+               text-align: center;
+               font-weight: bold;
            }
-
            .create-board-container{
                 margin: 5px;
                 padding: 33px;
                 border-radius: 5px;
                 background: lightgray;
                 width: 125px;
+                cursor: pointer;
                 
            }
            .create-board-button{
@@ -79,6 +81,7 @@
                 background: transparent;
                 font-weight: 700;
                 color: #6b778c;
+                cursor: pointer;
 
            }
            .create-board-container:hover{
