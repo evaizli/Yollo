@@ -8,7 +8,6 @@
     background: $theme-background-color-login-nav;
     height: 34px;
     display: flex;
-    justify-content: center;
     position: fixed;
     margin-left: 10px;
     top: 40px;
@@ -199,13 +198,14 @@ input[type="text"]::placeholder{
         margin-right: 5px;
         background: $list-background-color;
         border-color: transparent;
-        height: 50px !important;
+        // height: 50px !important;
         cursor: pointer;
         font-size: 14px;
         border-radius: 5px;
         resize: none;
         padding-left: 10px;
         padding-right: 10px;
+        box-shadow:$card-shadow-color;
     }
     .create-card-button{
         @include submitButton;
