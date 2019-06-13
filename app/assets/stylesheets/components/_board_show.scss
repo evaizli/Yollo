@@ -192,6 +192,7 @@ input[type="text"]::placeholder{
         display: flex;
         flex-direction: column;
         width: 100%;
+        background: $board-list-background;
     }
     .create-card-text-input{
         margin-left: 5px;
