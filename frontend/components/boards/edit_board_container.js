@@ -5,7 +5,9 @@ import {openModal, closeModal} from "../../actions/modal_actions";
 
 
 const mapStateToProps = (state, ownProps) =>{
+    let board = state.entities.boards[ownProps.boardId];
     return{
+        board,
         formType: "Edit Board"
     };
 };
