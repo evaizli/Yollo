@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CardIndexContainer from "../cards/card_index_container";
+import {} from "../lists/edit_list_form_container";
 
 
 
@@ -9,7 +10,6 @@ const ListIndexItem = (props) => {
     return(
         <>
         <li className="list-index-item-li"> 
-            {/* <div className="list-index-items-inner"> */}
                 <div className="list-index-item-nav">
                     <h2 className="list-index-item-title">{props.list.title}</h2>
                     <div className="space"></div>
@@ -19,7 +19,6 @@ const ListIndexItem = (props) => {
                     </button>
                 </div>
                 <CardIndexContainer listId={list.id} cards={cards} />
-             {/* </div> */}
         </li>
         </>
     );

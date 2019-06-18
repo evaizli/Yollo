@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return ({
-        createList: (list) => dispatch(createList(list))
+        processForm: (list) => dispatch(createList(list))
     });
 };
 

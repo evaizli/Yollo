@@ -55,7 +55,6 @@ export default class BoardForm extends React.Component{
     }
 
     render(){
-        // debugger
         return(
             <>
             {this.formTypeToggle()};

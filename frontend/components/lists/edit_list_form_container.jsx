@@ -1,34 +1,19 @@
-// import React from "react";
-// import { connect } from 'react-redux';
-// import ListIndexItem from "./list_index_item";
-// import { updateList } from "../../actions/list_actions";
+import React from "react";
+import { connect } from 'react-redux';
+import CreateListForm from "./create_list_form";
+import { updateList } from "../../actions/list_actions";
 
-// const mapStateToProps = (state, ownProps) => {
-//     const defaultPost = { title: '', board: '' };
-//     const post = state.posts[ownProps.match.params.postId] || defaultPost;
-//     const formType = 'Update Post';
+const mapStateToProps = (state, ownProps) => {
+    return({
+        formType: "Edit List"
+    });
+};
 
-//     return { post, formType };
-// };
-
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         updateList: id => dispatch(updateList(id)),
-//     };
-// };
+const mapDispatchToProps = dispatch => {
+    return {
+        processForm: id => dispatch(updateList(id)),
+    };
+};
 
 
-// class EditListForm extends React.Component{
-//     constructor(props){
-//         super(props);
-//     }
-    
-//     render(){
-//         return(
-//             <h2>UPDATE LIST</h2>
-//         );
-//     }
-// }
-
-
-// export default connect(mapStateToProps, mapDispatchToProps)(EditListForm);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateListForm);

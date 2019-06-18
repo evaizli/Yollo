@@ -15,7 +15,7 @@ class BoardShow extends React.Component {
      
         let boardId = this.props.match.params.boardId;
         this.props.fetchBoard(parseInt(boardId));
-        // document.getElementsByClassName("board-show-navbar").addEventListener("submit", () => this.setState({editMode: false}));
+        // document.getElementsByClassName("board-show-navbar").addEventListener("target", () => this.setState({editMode: false}));
     }
     
     componentDidUpdate(prevProps){

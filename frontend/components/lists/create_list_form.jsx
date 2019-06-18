@@ -23,29 +23,35 @@ class CreateListForm extends React.Component{
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createList(this.state);
+        this.props.processForm(this.state);
         this.setState({title: ""});
+    }
+    toggleForm(){
+        if (this.props.formType === "Create List"){
+            return(
+                <form className="create-list-form" onSubmit={this.handleSubmit}>
+                    <Textarea
+                        className="create-list-text-input"
+                        type="text"
+                        value={this.state.title}
+                        onChange={this.update("title")}
+                        placeholder="+ Add another list"
+                    />
+                    <input
+                        className="create-list-button"
+                        type="submit"
+                        value={this.props.formType}
+                    />
+                </form>
+            );
+        }
     }
     
 
     render(){
         return(
             <div className="create-list-form-container">
-                <form className="create-list-form" onSubmit={this.handleSubmit}>
-                    <Textarea
-                        className="create-list-text-input"
-                        type="text" 
-                        value={this.state.title} 
-                        // onClick={this.toggle("create-list-button")}
-                        onChange={this.update("title")}
-                        placeholder="+ Add another list"
-                    />
-                    <input 
-                        className="create-list-button" 
-                        type="submit" 
-                        value={this.props.formType}
-                    />
-                </form>
+                {this.toggleForm()}
             </div>
         );
     }
