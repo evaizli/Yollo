@@ -4,11 +4,12 @@ import BoardForm from "./board_form";
 import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = state =>({
-    board: {title: ""}
+    board: {title: ""},
+    formType: "Create Board"
 });
 
 const mapDispatchToProps = dispatch => ({
-    createBoard: (board) => dispatch(createBoard(board)),
+    processForm: (board) => dispatch(createBoard(board)),
     openModal: ()=> dispatch(openModal("create board")),
     closeModal: ()=> dispatch(closeModal())
 });

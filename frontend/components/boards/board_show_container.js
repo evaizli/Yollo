@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { fetchBoard } from "../../actions/board_actions";
 import BoardShow from "./board_show";
+import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state, ownProps) => {
     let boardId = ownProps.match.params.boardId;
@@ -17,6 +18,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return ({
         fetchBoard: (id) => dispatch(fetchBoard(id)),
+        // openModal: () => dispatch(openModal("edit board"))
     });
 };
 

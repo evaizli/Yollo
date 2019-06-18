@@ -5,7 +5,6 @@ import ListIndexContainer from "../lists/list_index_container";
 class BoardShow extends React.Component {
     constructor(props){
         super(props);
-    
     }
 
     componentDidMount(){
