@@ -33,32 +33,34 @@ class CreateListForm extends React.Component{
     toggleForm(){
         if (this.props.formType === "Create List"){
             return(
-                <form className="create-list-form" onSubmit={this.handleSubmit}>
-                    <Textarea
-                        className="create-list-text-input"
-                        type="text"
-                        value={this.state.title}
-                        onChange={this.update("title")}
-                        placeholder="+ Add another list"
-                    />
-                    <input
-                        className="create-list-button"
-                        type="submit"
-                        value={this.props.formType}
-                    />
-                </form>
+                <div className="create-list-form-container">
+                    <form className="create-list-form" onSubmit={this.handleSubmit}>
+                        <Textarea
+                            className="create-list-text-input"
+                            type="text"
+                            value={this.state.title}
+                            onChange={this.update("title")}
+                            placeholder="+ Add another list"
+                        />
+                        <input
+                            className="create-list-button"
+                            type="submit"
+                            value={this.props.formType}
+                        />
+                    </form>
+                </div>
             );
         } else if (this.props.formType === "Edit List"){
             return (
-                <form className="create-list-form" onSubmit={this.handleSubmit} >
+                <form className="edit-list-form" onSubmit={this.handleSubmit} >
                     <Textarea
-                        className="create-list-text-input"
+                        className="edit-list-text-input"
                         type="text"
                         value={this.state.title}
                         onChange={this.update("title")}
                     />
                     <input
-                        className="create-list-button"
+                        className="edit-list-button"
                         type="submit"
                         value="Update Title"
                     />
@@ -66,13 +68,14 @@ class CreateListForm extends React.Component{
             );
         }
     }
-    
+
 
     render(){
         return(
-            <div className="create-list-form-container">
+            <>
                 {this.toggleForm()}
-            </div>
+
+            </>
         );
     }
 }
