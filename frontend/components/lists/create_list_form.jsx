@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter } from 'react-router-dom';
-import AutosizeInput from 'react-input-autosize';
 import Textarea from 'react-textarea-autosize';
 
 
@@ -9,6 +8,7 @@ class CreateListForm extends React.Component{
         super(props);
         this.state={
             title: this.props.title,
+            id: this.props.id,
             board_id: this.props.match.params.boardId,
 
         };
@@ -23,8 +23,12 @@ class CreateListForm extends React.Component{
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.processForm(this.state);
-        this.setState({title: ""});
+        if (this.props.formType === "Create List"){
+            this.props.processForm(this.state);
+            this.setState({title: ""});
+        } else if (this.props.formType === "Edit List"){
+            this.props.processForm(this.state).then(()=> this.props.toggleEditMode());
+        }
     }
     toggleForm(){
         if (this.props.formType === "Create List"){
@@ -41,6 +45,22 @@ class CreateListForm extends React.Component{
                         className="create-list-button"
                         type="submit"
                         value={this.props.formType}
+                    />
+                </form>
+            );
+        } else if (this.props.formType === "Edit List"){
+            return (
+                <form className="create-list-form" onSubmit={this.handleSubmit} >
+                    <Textarea
+                        className="create-list-text-input"
+                        type="text"
+                        value={this.state.title}
+                        onChange={this.update("title")}
+                    />
+                    <input
+                        className="create-list-button"
+                        type="submit"
+                        value="Update Title"
                     />
                 </form>
             );

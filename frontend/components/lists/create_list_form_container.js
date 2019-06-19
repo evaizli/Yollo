@@ -5,6 +5,7 @@ import { createList } from "../../actions/list_actions";
 const mapStateToProps = (state, ownProps) => {
     return ({
         title: "",
+        id: undefined,
         formType: "Create List"
     });
 };

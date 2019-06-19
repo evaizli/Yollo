@@ -3,7 +3,6 @@ import React from "react";
 export default class BoardForm extends React.Component{
     constructor(props){
         super(props);
-        // debugger
         this.state = props.board;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.formTypeToggle = this.formTypeToggle.bind(this);
@@ -35,21 +34,21 @@ export default class BoardForm extends React.Component{
                             placeholder="Add Project Name"
                             onChange={this.update("title")}
                         />
-                        <input className="create-board-modal-button" type="submit" value={this.props.formType} className="create-board-button" />
+                        <input type="submit" value={this.props.formType} className="create-board-button" />
                     </form>
                 </div>
             );
         } else if (this.props.formType === "Edit Board"){
             const {title} = this.state; 
             return(
-                    <form className="create-board-modal-input-form" onSubmit={this.handleSubmit}>
+                    <form className="board-show-title-edit-container" onSubmit={this.handleSubmit}>
                         <input
-                            className="create-board-modal-input"
+                            className="board-show-title-edit-input"
                             type="text"
                             value={title}
                             onChange={this.update("title")}
                         />
-                        <input className="create-board-modal-button" type="submit" value={"edit title"} className="create-board-button" />
+                    <input className="board-title-update-button" type="submit" value="Update title"/>
                     </form>
             );
         }
@@ -58,7 +57,7 @@ export default class BoardForm extends React.Component{
     render(){
         return(
             <>
-            {this.formTypeToggle()};
+            {this.formTypeToggle()}
             </>
         );
     }

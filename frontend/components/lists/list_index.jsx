@@ -7,7 +7,7 @@ import CreateListFormContainer from "./create_list_form_container";
 class ListIndex extends React.Component{
 
     render(){
-        const { lists, deleteList, updateList, createList, cards} = this.props;
+        const { lists} = this.props;
         let listIndex = lists.map( list => {
             
             return(

@@ -6,14 +6,15 @@ const mapStateToProps = (state, ownProps) => {
     let cards = ownProps.cardIds ? ownProps.cardIds.map(cardId => state.entities.cards[cardId]) : [];
 
     return ({
-        cards: cards
+        cards: cards,
+        formType: "Edit List"
     });
 };
 
 const mapDispatchToProps = dispatch => {
     return ({
         deleteList: (id) => dispatch(deleteList(id)),
-        updateList: (list) => dispatch(updateList(list)),
+        processForm: (list) => dispatch(updateList(list)),
     });
 };
 
