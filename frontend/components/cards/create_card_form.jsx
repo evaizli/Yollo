@@ -39,7 +39,7 @@ class CreateCardForm extends React.Component{
     }
     handleClickEvent(event) {
         if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-            this.setState({ createCardMode: false });
+            this.setState({ createCardMode: false, title: "" });
         }
     }
     setWrapperRef(node) {
