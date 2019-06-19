@@ -56,7 +56,6 @@ export const createBoard = (board) => dispatch => {
 };
 
 export const updateBoard = (board) => dispatch => {
-    debugger
     return (
         ApiUtil.updateBoard(board).then(payload => dispatch(receiveBoard(payload)),
         err => dispatch(receiveBoardErrors(err.responseJSON)))

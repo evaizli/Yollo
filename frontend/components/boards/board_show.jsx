@@ -9,13 +9,16 @@ class BoardShow extends React.Component {
         this.state = {
             editMode: false
         };
+        this.toggleEditMode = this.toggleEditMode.bind(this);
+        this.handleClickEvent = this.handleClickEvent.bind(this);
+        this.setWrapperRef = this.setWrapperRef.bind(this);
     }
 
     componentDidMount(){
      
         let boardId = this.props.match.params.boardId;
         this.props.fetchBoard(parseInt(boardId));
-        // document.getElementsByClassName("board-show-navbar").addEventListener("target", () => this.setState({editMode: false}));
+        document.addEventListener("mousedown", this.handleClickEvent);
     }
     
     componentDidUpdate(prevProps){
@@ -24,14 +27,31 @@ class BoardShow extends React.Component {
         }
     }
 
+    componentWillUnmount() {
+        document.removeEventListener("mousedown", this.handleClickEvent);
+    }
+
     toggleEditMode() {
         this.setState({ editMode: !this.state.editMode });
     }
 
     toggleEditView(){
         let boardId = this.props.match.params.boardId;
-        return (this.state.editMode) ? <EditBoardContainer boardId={boardId}/> : this.props.board.title;
+        return (this.state.editMode) ? <EditBoardContainer boardId={boardId}
+            toggleEditMode={this.toggleEditMode}/> : this.props.board.title;
     }
+
+    handleClickEvent(event){
+        if (this.wrapperRef && !this.wrapperRef.contains(event.target)){
+            this.setState({editMode: false});
+        }
+    }
+
+    setWrapperRef(node) {
+        this.wrapperRef = node;
+    }
+
+
     render() {
         const {board} = this.props;
         if (!board){
@@ -41,7 +61,8 @@ class BoardShow extends React.Component {
                 <div>
                     <div className="board-show">
                         <div className ="board-show-navbar"
-                            onClick={() => this.setState({editMode: true})}>
+                            onClick={() => this.setState({ editMode: true })} 
+                            ref={this.setWrapperRef}>
                             {this.toggleEditView()}
                         </div>
                     </div>

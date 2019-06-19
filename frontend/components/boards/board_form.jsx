@@ -3,6 +3,7 @@ import React from "react";
 export default class BoardForm extends React.Component{
     constructor(props){
         super(props);
+        // debugger
         this.state = props.board;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.formTypeToggle = this.formTypeToggle.bind(this);
@@ -14,7 +15,7 @@ export default class BoardForm extends React.Component{
             this.props.processForm(this.state)
             .then(()=> this.props.closeModal());
         } else if (this.props.formType === "Edit Board") {
-            this.props.processForm(this.state);
+            this.props.processForm(this.state).then(() => this.props.toggleEditMode());
         }
     }
 
