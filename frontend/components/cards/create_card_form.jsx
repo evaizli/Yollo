@@ -11,6 +11,8 @@ class CreateCardForm extends React.Component{
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.toggleCreateMode = this.toggleCreateMode.bind(this);
+        this.handleClickEvent = this.handleClickEvent.bind(this);
+        this.setWrapperRef = this.setWrapperRef.bind(this);
     }
 
     update(field) {
@@ -29,6 +31,21 @@ class CreateCardForm extends React.Component{
         this.setState({createCardMode: !this.state.createCardMode});
     }
 
+    componentDidMount() {
+        document.addEventListener("mousedown", this.handleClickEvent);
+    }
+    componentWillUnmount() {
+        document.removeEventListener("mousedown", this.handleClickEvent);
+    }
+    handleClickEvent(event) {
+        if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+            this.setState({ createCardMode: false });
+        }
+    }
+    setWrapperRef(node) {
+        this.wrapperRef = node;
+    }
+
     createCard(){
         if (this.state.createCardMode){
             return (
@@ -42,10 +59,11 @@ class CreateCardForm extends React.Component{
         
     }
 
+
     render(){
         
         return(
-            <div className="create-card-form-container">
+            <div className="create-card-form-container" ref={this.setWrapperRef}>
                 <form className="create-card-form"onSubmit={this.handleSubmit}>
                     <Textarea
                         className = "create-card-text-input"

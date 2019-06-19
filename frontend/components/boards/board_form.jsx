@@ -49,7 +49,7 @@ export default class BoardForm extends React.Component{
                             value={title}
                             onChange={this.update("title")}
                         />
-                        <input className="create-board-modal-button" type="submit" value={this.props.formType} className="create-board-button" />
+                        <input className="create-board-modal-button" type="submit" value={"edit title"} className="create-board-button" />
                     </form>
             );
         }

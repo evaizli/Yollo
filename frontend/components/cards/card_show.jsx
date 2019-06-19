@@ -10,6 +10,8 @@ class CardShow extends React.Component{
             editMode: false
         };
         this.toggleEditMode = this.toggleEditMode.bind(this);
+        this.handleClickEvent = this.handleClickEvent.bind(this);
+        this.setWrapperRef = this.setWrapperRef.bind(this);
     }
 
     toggleEditMode(){
@@ -21,6 +23,20 @@ class CardShow extends React.Component{
             card={this.props.card}/> : this.props.card.description;
     }
 
+    componentDidMount() {
+        document.addEventListener("mousedown", this.handleClickEvent);
+    }
+    componentWillUnmount() {
+        document.removeEventListener("mousedown", this.handleClickEvent);
+    }
+    handleClickEvent(event) {
+        if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+            this.setState({ editMode: false });
+        }
+    }
+    setWrapperRef(node) {
+        this.wrapperRef = node;
+    }
 
     render(){
         const {id, title, description, dueDate} = this.props.card;
@@ -34,7 +50,7 @@ class CardShow extends React.Component{
                     <div 
                         className="card-show-task-description-container" 
 
-                        onClick={()=> this.setState({editMode: true})}>
+                        onClick={()=> this.setState({editMode: true})} ref={this.setWrapperRef}>
                         {this.descriptions()}
                     </div>
                 </div>
