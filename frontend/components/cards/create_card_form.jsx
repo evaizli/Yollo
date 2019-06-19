@@ -63,13 +63,14 @@ class CreateCardForm extends React.Component{
     render(){
         
         return(
-            <div className="create-card-form-container" ref={this.setWrapperRef}>
+            <div className="create-card-form-container">
                 <form className="create-card-form"onSubmit={this.handleSubmit}>
                     <Textarea
                         className = "create-card-text-input"
                         type="text" 
                         value ={this.state.title}
                         onClick = {() => this.setState({createCardMode: true})}
+                        ref={this.setWrapperRef}
                         onChange={this.update("title")}
                         placeholder = "+ Add another card"
                     />
