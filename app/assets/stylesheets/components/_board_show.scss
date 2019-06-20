@@ -240,6 +240,7 @@ input[type="text"]::placeholder{
     }
     .create-card-button{
         @include submitButton;
+        margin-left: 5px;
     }
     .create-card-button:hover{
         @include submitHover;

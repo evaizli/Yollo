@@ -23,7 +23,7 @@ class EditDescriptionForm extends React.Component {
         return(
             <div>
                 <form className="card-show-edit-description-form-container" onClick={this.handleSubmit}>
-                    <div className="textarea-wraper">
+                    <div className="card-show-textarea-wrapper">
                         <textarea 
                             className="card-show-description-input"
                             value={this.state.description} 

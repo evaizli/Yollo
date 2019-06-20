@@ -3,8 +3,9 @@ import CreateCardForm from "./create_card_form";
 import { createCard } from "../../actions/card_actions";
 
 const mapStateToProps = (state, ownProps) => {
+
     return ({
-        title: "",
+        title:"",
         formType: "Create Card",
         listId: ownProps.listId
     });

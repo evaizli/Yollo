@@ -14,7 +14,9 @@
     font-family: $theme-font-base;
     position: relative;
 }
+.card-show-description-wrapper{
 
+}
 .card-show-card-title{
     font-size: 24px;
     color:$theme-background-color-login-nav;
@@ -36,7 +38,12 @@
     text-align: left;
     padding: 6px;
     word-break: break-word;
+    background: #e0dddd;
 }
+// .card-show-task-description-container:focus{
+//     background: gray;
+// }
+
 
 .card-show-description-title{
     text-align: left;
@@ -61,17 +68,18 @@
     border-color: transparent;
     color: black;
     font-size: 17px;
-    background: darkgray;
     font-family: $theme-font-base;
     resize: none;
     width: 100%;
     margin-bottom: 8px;
+    background: #e0dddd;
 }
 
 
 
 .card-show-description-edit-button{
     @include submitButton;
+    margin-left: unset;
 }
 .card-show-description-edit-button:hover{
     @include submitHover;

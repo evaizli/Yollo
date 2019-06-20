@@ -1,5 +1,6 @@
 import React from "react";
 import EditDescriptionContainer from "./edit_description_container";
+import EditCardContainer from "./edit_description_container";
 import { closeModal } from "../../actions/modal_actions";
 
 
@@ -7,22 +8,22 @@ class CardShow extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            editMode: false
+            descriptionEditMode: false,
+            titleEditMode: false
         };
-        this.toggleEditMode = this.toggleEditMode.bind(this);
+        this.toggleDescriptionEditMode = this.toggleDescriptionEditMode.bind(this);
         this.handleClickEvent = this.handleClickEvent.bind(this);
         this.setWrapperRef = this.setWrapperRef.bind(this);
     }
 
-    toggleEditMode(){
-        this.setState({editMode: !this.state.editMode});
+    toggleDescriptionEditMode(){
+        this.setState({ descriptionEditMode: !this.state.descriptionEditMode});
     }
 
-    descriptions(){ 
-        return (this.state.editMode) ? <EditDescriptionContainer toggleEditMode={this.toggleEditMode} 
+    toggleDescriptions(){ 
+        return (this.state.descriptionEditMode) ? <EditDescriptionContainer toggleEditMode={this.toggleDescriptionEditMode} 
             card={this.props.card}/> : this.props.card.description;
     }
-
     componentDidMount() {
         document.addEventListener("mousedown", this.handleClickEvent);
     }
@@ -31,7 +32,7 @@ class CardShow extends React.Component{
     }
     handleClickEvent(event) {
         if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-            this.setState({ editMode: false });
+            this.setState({ descriptionEditMode: false});
         }
     }
     setWrapperRef(node) {
@@ -42,7 +43,9 @@ class CardShow extends React.Component{
         const {id, title, description, dueDate} = this.props.card;
         return (
             <div className="card-show-container">
-                <div className="card-show-card-title">{title}</div>
+                <div className="card-show-card-title">
+                    {title}
+                </div>
                 <div className="card-show-list-title">in list {this.props.listTitle}</div>
 
                 <div>
@@ -50,8 +53,8 @@ class CardShow extends React.Component{
                     <div 
                         className="card-show-task-description-container" 
 
-                        onClick={()=> this.setState({editMode: true})} ref={this.setWrapperRef}>
-                        {this.descriptions()}
+                        onClick={()=> this.setState({descriptionEditMode: true})} ref={this.setWrapperRef}>
+                        {this.toggleDescriptions()}
                     </div>
                 </div>
 

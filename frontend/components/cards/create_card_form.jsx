@@ -6,8 +6,7 @@ class CreateCardForm extends React.Component{
         super(props);
         this.state = {
             title: this.props.title,
-            list_id: this.props.listId,
-            createCardMode: false 
+            editMode: false 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.toggleCreateMode = this.toggleCreateMode.bind(this);
@@ -28,7 +27,7 @@ class CreateCardForm extends React.Component{
     }
 
     toggleCreateMode(){
-        this.setState({createCardMode: !this.state.createCardMode});
+        this.setState({eidtMode: !this.state.editMode});
     }
 
     componentDidMount() {
@@ -39,7 +38,7 @@ class CreateCardForm extends React.Component{
     }
     handleClickEvent(event) {
         if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-            this.setState({ createCardMode: false, title: "" });
+            this.setState({ editMode: false, title: "" });
         }
     }
     setWrapperRef(node) {
@@ -47,7 +46,7 @@ class CreateCardForm extends React.Component{
     }
 
     createCard(){
-        if (this.state.createCardMode){
+        if (this.state.editMode){
             return (
                 <input
                     className="create-card-button"
@@ -63,14 +62,13 @@ class CreateCardForm extends React.Component{
     render(){
         
         return(
-            <div className="create-card-form-container">
-                <form className="create-card-form"onSubmit={this.handleSubmit}>
+            <div className="create-card-form-container" ref={this.setWrapperRef}>
+                <form className="create-card-form" onSubmit={this.handleSubmit} >
                     <Textarea
                         className = "create-card-text-input"
                         type="text" 
                         value ={this.state.title}
-                        onClick = {() => this.setState({createCardMode: true})}
-                        ref={this.setWrapperRef}
+                        onClick = {() => this.setState({editMode: true})}
                         onChange={this.update("title")}
                         placeholder = "+ Add another card"
                     />
