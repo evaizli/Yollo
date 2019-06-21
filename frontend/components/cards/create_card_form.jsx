@@ -6,6 +6,7 @@ class CreateCardForm extends React.Component{
         super(props);
         this.state = {
             title: this.props.title,
+            list_id: this.props.listId,
             editMode: false 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
