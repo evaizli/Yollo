@@ -3,8 +3,9 @@ import EditCardForm from "./edit_card_form";
 import {updateCard} from "../../actions/card_actions";
 
 
-const mapStateToProps = (state, Props) =>{
+const mapStateToProps = (state, ownProps) =>{
     return({
+        card: ownProps.card,
         formType: "Edit Card"
     });
 };

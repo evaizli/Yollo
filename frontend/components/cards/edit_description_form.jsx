@@ -15,7 +15,9 @@ class EditDescriptionForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.updateCard(this.state).then(() => this.props.toggleEditMode());
+        debugger;
+        this.props.updateCard(this.state).then(() => { debugger; 
+            return this.props.toggleEditMode()});
     }
 
     render(){

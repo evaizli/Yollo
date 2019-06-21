@@ -1,6 +1,6 @@
 import React from "react";
 import EditDescriptionContainer from "./edit_description_container";
-import EditCardContainer from "./edit_description_container";
+import EditCardContainer from "./edit_card_container";
 
 
 class CardShow extends React.Component{
@@ -49,18 +49,15 @@ class CardShow extends React.Component{
         }
     }
     setWrapperRef(node) {
-        if (node.className ==="card-show-card-title" ){
             this.wrapperRef = node;
-        } else if (node.className === "card-show-task-description-container"){
-            this.wrapperRef = node;
-        }
     }
 
     render(){
         const {id, title} = this.props.card;
         return (
             <div className="card-show-container">
-                <div className="card-show-card-title"
+                <div 
+                    className="card-show-card-title"
                     onClick={()=> this.setState({titleEditMode: true})}
                     ref={this.setWrapperRef}>
                     {this.toggleTitle()}
