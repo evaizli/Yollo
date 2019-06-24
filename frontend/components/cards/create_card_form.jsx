@@ -47,7 +47,6 @@ class CreateCardForm extends React.Component{
     }
 
     createCard(){
-        // debugger
         if (this.state.editMode){
             return (
                 <input
@@ -55,7 +54,6 @@ class CreateCardForm extends React.Component{
                     type="submit"
                     value={this.props.formType}
                     onClick={this.handleSubmit}
-                    ref={this.setWrapperRef}
                 />
             );
         }   
@@ -63,10 +61,9 @@ class CreateCardForm extends React.Component{
 
 
     render(){
-        // debugger
         return(
             <div className="create-card-form-container" >
-                <form className="create-card-form" >
+                <form className="create-card-form" ref={this.setWrapperRef}>
                     <Textarea
                         className = "create-card-text-input"
                         type="text" 
