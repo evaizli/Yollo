@@ -21,17 +21,17 @@ class EditDescriptionForm extends React.Component {
     }
 
     render(){
-
+    
+        let description = (this.state.description === null) ? undefined : this.state.description;
         return(
             <div>
                 <form className="card-show-edit-description-form-container" onSubmit={this.handleSubmit}>
                     <div className="card-show-textarea-wrapper">
                         <textarea 
                             className="card-show-description-input"
-                            value={this.state.description} 
+                            value={description} 
                             onChange={this.update("description")}
                             placeholder="Add a more detailed description"
-                            autoFocus
                         >
                         </textarea>
                     </div>
