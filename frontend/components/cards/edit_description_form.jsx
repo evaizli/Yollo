@@ -15,16 +15,16 @@ class EditDescriptionForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        debugger;
-        this.props.updateCard(this.state).then(() => { debugger; 
-            return this.props.toggleEditMode()});
+        this.props.updateCard(this.state).then(() => {
+            return this.props.toggleEditMode();
+        });
     }
 
     render(){
 
         return(
             <div>
-                <form className="card-show-edit-description-form-container" onClick={this.handleSubmit}>
+                <form className="card-show-edit-description-form-container" onSubmit={this.handleSubmit}>
                     <div className="card-show-textarea-wrapper">
                         <textarea 
                             className="card-show-description-input"

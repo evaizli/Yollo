@@ -3,6 +3,7 @@ import React from "react";
 class EditCardForm extends React.Component{
     constructor(props){
         super(props);
+        // debugger
         this.state={
             title: this.props.card.title,
             id: this.props.card.id
@@ -20,13 +21,15 @@ class EditCardForm extends React.Component{
     }
 
     render(){
+        
         return(
             <div>
-                <form className="edit-card-form" onSubmit={this.handleSubmit}>
+                <form className="edit-card-form" onSubmit={this.handleSubmit} >
                     <input className="edit-card-title-input"
                         type="text"
                         value={this.state.title}
-                        onChange={this.update("title")}/>
+                        onChange={this.update("title")}
+                        />
                     <input className="edit-card-title-submit-button" type="submit" value="Update Title"/>
                 </form>
             </div>

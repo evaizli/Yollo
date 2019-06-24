@@ -235,9 +235,9 @@ input[type="text"]::placeholder{
         padding-right: 10px;
         box-shadow:$card-shadow-color;
     }
-    .create-card-text-input:focus{
-        height:unset !important;
-    }
+    // .create-card-text-input:focus{
+    //     height:unset !important;
+    // }
     .create-card-button{
         @include submitButton;
         margin-left: 5px;

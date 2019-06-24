@@ -13,6 +13,7 @@ class CardShow extends React.Component{
         this.toggleDescriptionEditMode = this.toggleDescriptionEditMode.bind(this);
         this.handleClickEvent = this.handleClickEvent.bind(this);
         this.setWrapperRef = this.setWrapperRef.bind(this);
+        this.setTitleRef = this.setTitleRef.bind(this);
         this.toggleTitleEditMode = this.toggleTitleEditMode.bind(this);
     }
 
@@ -23,18 +24,20 @@ class CardShow extends React.Component{
     toggleDescriptions(){ 
         return (this.state.descriptionEditMode) ? <EditDescriptionContainer 
             toggleEditMode={this.toggleDescriptionEditMode} 
-            card={this.props.card}/> : this.props.card.description;
+            card={this.props.card}
+            /> : this.props.card.description;
     }
-
+        
     toggleTitleEditMode(){
         this.setState({titleEditMode: !this.state.titleEditMode});
     }
-
+        
     toggleTitle(){
         return (this.state.titleEditMode) ? <EditCardContainer 
-            toggleEditMode = {this.toggleTitleEditMode}
-            card = {this.props.card}/> : this.props.card.title;
+        toggleEditMode = {this.toggleTitleEditMode}
+        card = {this.props.card}/> : this.props.card.title;
     }
+
     componentDidMount() {
         document.addEventListener("mousedown", this.handleClickEvent);
     }
@@ -44,13 +47,19 @@ class CardShow extends React.Component{
     handleClickEvent(event) {
         if (this.wrapperRef.className === "card-show-task-description-container" && !this.wrapperRef.contains(event.target)) {
             this.setState({ descriptionEditMode: false});
-        } else if (this.wrapperRef.className === "card-show-card-title" && !this.wrapperRef.contains(event.target)){
-            this.setState({titleEditMode: false});
         }
+        if (this.titleRef.className === "card-show-card-title" && !this.titleRef.contains(event.target)) {
+            this.setState({titleEditMode: false});
+        } 
     }
+
     setWrapperRef(node) {
-            this.wrapperRef = node;
+        this.wrapperRef = node;
     }
+    setTitleRef(node){
+        this.titleRef = node;
+    }
+ 
 
     render(){
         const {id, title} = this.props.card;
@@ -59,7 +68,7 @@ class CardShow extends React.Component{
                 <div 
                     className="card-show-card-title"
                     onClick={()=> this.setState({titleEditMode: true})}
-                    ref={this.setWrapperRef}>
+                    ref={this.setTitleRef}>
                     {this.toggleTitle()}
                 </div>
                 <div className="card-show-list-title">in list {this.props.listTitle}</div>
@@ -68,7 +77,9 @@ class CardShow extends React.Component{
                     <h2 className="card-show-description-title">Description</h2>
                     <div 
                         className="card-show-task-description-container" 
-                        onClick={()=> this.setState({descriptionEditMode: true})} ref={this.setWrapperRef}>
+                        onClick={()=> this.setState({descriptionEditMode: true})} 
+                        ref={this.setWrapperRef}
+                    >
                         {this.toggleDescriptions()}
                     </div>
                 </div>
