@@ -3,7 +3,6 @@ import React from "react";
 class EditCardForm extends React.Component{
     constructor(props){
         super(props);
-        // debugger
         this.state={
             title: this.props.card.title,
             id: this.props.card.id
